@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB0358222008402B00622A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358212008402B00622A08 /* AppDelegate.swift */; };
+		DB0358242008402B00622A08 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358232008402B00622A08 /* RootViewController.swift */; };
+		DB0358262008402B00622A08 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358252008402B00622A08 /* DataViewController.swift */; };
+		DB0358282008402B00622A08 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358272008402B00622A08 /* ModelController.swift */; };
+		DB03582B2008402B00622A08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0358292008402B00622A08 /* Main.storyboard */; };
+		DB03582D2008402B00622A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB03582C2008402B00622A08 /* Assets.xcassets */; };
+		DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB03582E2008402B00622A08 /* LaunchScreen.storyboard */; };
+		DB03583B2008402C00622A08 /* WeekendWarriorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03583A2008402C00622A08 /* WeekendWarriorTests.swift */; };
+		DB0358462008402C00622A08 /* WeekendWarriorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB0358372008402C00622A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0358162008402B00622A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB03581D2008402B00622A08;
+			remoteInfo = WeekendWarrior;
+		};
+		DB0358422008402C00622A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB0358162008402B00622A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB03581D2008402B00622A08;
+			remoteInfo = WeekendWarrior;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB03581E2008402B00622A08 /* WeekendWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekendWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0358212008402B00622A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB0358232008402B00622A08 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DB0358252008402B00622A08 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		DB0358272008402B00622A08 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		DB03582A2008402B00622A08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB03582C2008402B00622A08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB03582F2008402B00622A08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB0358312008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB0358362008402C00622A08 /* WeekendWarriorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekendWarriorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB03583A2008402C00622A08 /* WeekendWarriorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorTests.swift; sourceTree = "<group>"; };
+		DB03583C2008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB0358412008402C00622A08 /* WeekendWarriorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekendWarriorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorUITests.swift; sourceTree = "<group>"; };
+		DB0358472008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB03581B2008402B00622A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0358332008402C00622A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB03583E2008402C00622A08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB0358152008402B00622A08 = {
+			isa = PBXGroup;
+			children = (
+				DB0358202008402B00622A08 /* WeekendWarrior */,
+				DB0358392008402C00622A08 /* WeekendWarriorTests */,
+				DB0358442008402C00622A08 /* WeekendWarriorUITests */,
+				DB03581F2008402B00622A08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB03581F2008402B00622A08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB03581E2008402B00622A08 /* WeekendWarrior.app */,
+				DB0358362008402C00622A08 /* WeekendWarriorTests.xctest */,
+				DB0358412008402C00622A08 /* WeekendWarriorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB0358202008402B00622A08 /* WeekendWarrior */ = {
+			isa = PBXGroup;
+			children = (
+				DB0358212008402B00622A08 /* AppDelegate.swift */,
+				DB0358232008402B00622A08 /* RootViewController.swift */,
+				DB0358252008402B00622A08 /* DataViewController.swift */,
+				DB0358272008402B00622A08 /* ModelController.swift */,
+				DB0358292008402B00622A08 /* Main.storyboard */,
+				DB03582C2008402B00622A08 /* Assets.xcassets */,
+				DB03582E2008402B00622A08 /* LaunchScreen.storyboard */,
+				DB0358312008402C00622A08 /* Info.plist */,
+			);
+			path = WeekendWarrior;
+			sourceTree = "<group>";
+		};
+		DB0358392008402C00622A08 /* WeekendWarriorTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB03583A2008402C00622A08 /* WeekendWarriorTests.swift */,
+				DB03583C2008402C00622A08 /* Info.plist */,
+			);
+			path = WeekendWarriorTests;
+			sourceTree = "<group>";
+		};
+		DB0358442008402C00622A08 /* WeekendWarriorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */,
+				DB0358472008402C00622A08 /* Info.plist */,
+			);
+			path = WeekendWarriorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB03581D2008402B00622A08 /* WeekendWarrior */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB03584A2008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarrior" */;
+			buildPhases = (
+				DB03581A2008402B00622A08 /* Sources */,
+				DB03581B2008402B00622A08 /* Frameworks */,
+				DB03581C2008402B00622A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeekendWarrior;
+			productName = WeekendWarrior;
+			productReference = DB03581E2008402B00622A08 /* WeekendWarrior.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB0358352008402C00622A08 /* WeekendWarriorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB03584D2008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarriorTests" */;
+			buildPhases = (
+				DB0358322008402C00622A08 /* Sources */,
+				DB0358332008402C00622A08 /* Frameworks */,
+				DB0358342008402C00622A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB0358382008402C00622A08 /* PBXTargetDependency */,
+			);
+			name = WeekendWarriorTests;
+			productName = WeekendWarriorTests;
+			productReference = DB0358362008402C00622A08 /* WeekendWarriorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB0358402008402C00622A08 /* WeekendWarriorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB0358502008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarriorUITests" */;
+			buildPhases = (
+				DB03583D2008402C00622A08 /* Sources */,
+				DB03583E2008402C00622A08 /* Frameworks */,
+				DB03583F2008402C00622A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB0358432008402C00622A08 /* PBXTargetDependency */,
+			);
+			name = WeekendWarriorUITests;
+			productName = WeekendWarriorUITests;
+			productReference = DB0358412008402C00622A08 /* WeekendWarriorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB0358162008402B00622A08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Wyatt Kim";
+				TargetAttributes = {
+					DB03581D2008402B00622A08 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					DB0358352008402C00622A08 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DB03581D2008402B00622A08;
+					};
+					DB0358402008402C00622A08 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DB03581D2008402B00622A08;
+					};
+				};
+			};
+			buildConfigurationList = DB0358192008402B00622A08 /* Build configuration list for PBXProject "WeekendWarrior" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB0358152008402B00622A08;
+			productRefGroup = DB03581F2008402B00622A08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB03581D2008402B00622A08 /* WeekendWarrior */,
+				DB0358352008402C00622A08 /* WeekendWarriorTests */,
+				DB0358402008402C00622A08 /* WeekendWarriorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB03581C2008402B00622A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
+				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
+				DB03582B2008402B00622A08 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0358342008402C00622A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB03583F2008402C00622A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB03581A2008402B00622A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
+				DB0358282008402B00622A08 /* ModelController.swift in Sources */,
+				DB0358262008402B00622A08 /* DataViewController.swift in Sources */,
+				DB0358222008402B00622A08 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB0358322008402C00622A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB03583B2008402C00622A08 /* WeekendWarriorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB03583D2008402C00622A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0358462008402C00622A08 /* WeekendWarriorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB0358382008402C00622A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB03581D2008402B00622A08 /* WeekendWarrior */;
+			targetProxy = DB0358372008402C00622A08 /* PBXContainerItemProxy */;
+		};
+		DB0358432008402C00622A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB03581D2008402B00622A08 /* WeekendWarrior */;
+			targetProxy = DB0358422008402C00622A08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB0358292008402B00622A08 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB03582A2008402B00622A08 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB03582E2008402B00622A08 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB03582F2008402B00622A08 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB0358482008402C00622A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB0358492008402C00622A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB03584B2008402C00622A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeekendWarrior/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = USC.WeekendWarrior;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB03584C2008402C00622A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeekendWarrior/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = USC.WeekendWarrior;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB03584E2008402C00622A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeekendWarriorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = USC.WeekendWarriorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeekendWarrior.app/WeekendWarrior";
+			};
+			name = Debug;
+		};
+		DB03584F2008402C00622A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeekendWarriorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = USC.WeekendWarriorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeekendWarrior.app/WeekendWarrior";
+			};
+			name = Release;
+		};
+		DB0358512008402C00622A08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeekendWarriorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = USC.WeekendWarriorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WeekendWarrior;
+			};
+			name = Debug;
+		};
+		DB0358522008402C00622A08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WeekendWarriorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = USC.WeekendWarriorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WeekendWarrior;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB0358192008402B00622A08 /* Build configuration list for PBXProject "WeekendWarrior" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0358482008402C00622A08 /* Debug */,
+				DB0358492008402C00622A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB03584A2008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarrior" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB03584B2008402C00622A08 /* Debug */,
+				DB03584C2008402C00622A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB03584D2008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarriorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB03584E2008402C00622A08 /* Debug */,
+				DB03584F2008402C00622A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB0358502008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarriorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0358512008402C00622A08 /* Debug */,
+				DB0358522008402C00622A08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB0358162008402B00622A08 /* Project object */;
+}
