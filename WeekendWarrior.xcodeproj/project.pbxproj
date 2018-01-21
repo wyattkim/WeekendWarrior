@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BED616D9D21DC21EC12C120 /* Pods_WeekendWarrior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C163100891866AF08117CD /* Pods_WeekendWarrior.framework */; };
+		A4C2F7FA009935B4283DD4FF /* Pods_WeekendWarriorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321EF7D0E56A8082B2DB5A30 /* Pods_WeekendWarriorTests.framework */; };
+		D3B7C3DC948B863209F8563F /* Pods_WeekendWarriorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F39AC702E15045D1054050 /* Pods_WeekendWarriorUITests.framework */; };
 		DB0358222008402B00622A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358212008402B00622A08 /* AppDelegate.swift */; };
 		DB0358242008402B00622A08 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358232008402B00622A08 /* RootViewController.swift */; };
 		DB0358262008402B00622A08 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358252008402B00622A08 /* DataViewController.swift */; };
@@ -16,6 +19,7 @@
 		DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB03582E2008402B00622A08 /* LaunchScreen.storyboard */; };
 		DB03583B2008402C00622A08 /* WeekendWarriorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03583A2008402C00622A08 /* WeekendWarriorTests.swift */; };
 		DB0358462008402C00622A08 /* WeekendWarriorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */; };
+		DB3B0371201549150037E7AD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DB3B0370201549150037E7AD /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07F39AC702E15045D1054050 /* Pods_WeekendWarriorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeekendWarriorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08AD5400F51875CB48F8FD54 /* Pods-WeekendWarriorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarriorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarriorTests/Pods-WeekendWarriorTests.release.xcconfig"; sourceTree = "<group>"; };
+		1D042B678E10DEDC5559D315 /* Pods-WeekendWarrior.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarrior.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarrior/Pods-WeekendWarrior.release.xcconfig"; sourceTree = "<group>"; };
+		23C163100891866AF08117CD /* Pods_WeekendWarrior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeekendWarrior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		321EF7D0E56A8082B2DB5A30 /* Pods_WeekendWarriorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeekendWarriorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C4A55D94DC39248362806D3 /* Pods-WeekendWarrior.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarrior.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarrior/Pods-WeekendWarrior.debug.xcconfig"; sourceTree = "<group>"; };
+		492A77B6CFA35E2EED744B8D /* Pods-WeekendWarriorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarriorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarriorUITests/Pods-WeekendWarriorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7BA9B5FA3CCFF00DFC299E3D /* Pods-WeekendWarriorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarriorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarriorUITests/Pods-WeekendWarriorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7A691F643921E9C108F6A09 /* Pods-WeekendWarriorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarriorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarriorTests/Pods-WeekendWarriorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB03581E2008402B00622A08 /* WeekendWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekendWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0358212008402B00622A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB0358232008402B00622A08 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +64,7 @@
 		DB0358412008402C00622A08 /* WeekendWarriorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekendWarriorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorUITests.swift; sourceTree = "<group>"; };
 		DB0358472008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3B0370201549150037E7AD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BED616D9D21DC21EC12C120 /* Pods_WeekendWarrior.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C2F7FA009935B4283DD4FF /* Pods_WeekendWarriorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B7C3DC948B863209F8563F /* Pods_WeekendWarriorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66A516051A42BEBCDA93D268 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23C163100891866AF08117CD /* Pods_WeekendWarrior.framework */,
+				321EF7D0E56A8082B2DB5A30 /* Pods_WeekendWarriorTests.framework */,
+				07F39AC702E15045D1054050 /* Pods_WeekendWarriorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		749F50A62D662827C2C75299 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C4A55D94DC39248362806D3 /* Pods-WeekendWarrior.debug.xcconfig */,
+				1D042B678E10DEDC5559D315 /* Pods-WeekendWarrior.release.xcconfig */,
+				C7A691F643921E9C108F6A09 /* Pods-WeekendWarriorTests.debug.xcconfig */,
+				08AD5400F51875CB48F8FD54 /* Pods-WeekendWarriorTests.release.xcconfig */,
+				7BA9B5FA3CCFF00DFC299E3D /* Pods-WeekendWarriorUITests.debug.xcconfig */,
+				492A77B6CFA35E2EED744B8D /* Pods-WeekendWarriorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DB0358152008402B00622A08 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +125,8 @@
 				DB0358392008402C00622A08 /* WeekendWarriorTests */,
 				DB0358442008402C00622A08 /* WeekendWarriorUITests */,
 				DB03581F2008402B00622A08 /* Products */,
+				749F50A62D662827C2C75299 /* Pods */,
+				66A516051A42BEBCDA93D268 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +143,7 @@
 		DB0358202008402B00622A08 /* WeekendWarrior */ = {
 			isa = PBXGroup;
 			children = (
+				DB3B0370201549150037E7AD /* awsconfiguration.json */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
 				DB0358252008402B00622A08 /* DataViewController.swift */,
@@ -138,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB03584A2008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarrior" */;
 			buildPhases = (
+				8A64A0BFAFA113BE07DBA8CA /* [CP] Check Pods Manifest.lock */,
 				DB03581A2008402B00622A08 /* Sources */,
 				DB03581B2008402B00622A08 /* Frameworks */,
 				DB03581C2008402B00622A08 /* Resources */,
+				0E723929DF5CE5CE836DF9AD /* [CP] Embed Pods Frameworks */,
+				D7E2BEEB273CFB8B2F824875 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB03584D2008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarriorTests" */;
 			buildPhases = (
+				8DFDCA0A0026E16E83E138F1 /* [CP] Check Pods Manifest.lock */,
 				DB0358322008402C00622A08 /* Sources */,
 				DB0358332008402C00622A08 /* Frameworks */,
 				DB0358342008402C00622A08 /* Resources */,
+				393C78390416C0BD3D0DA43B /* [CP] Embed Pods Frameworks */,
+				F2E067EC9AA79EA9E535DB4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB0358502008402C00622A08 /* Build configuration list for PBXNativeTarget "WeekendWarriorUITests" */;
 			buildPhases = (
+				A4FE50F5F33752D76E736D81 /* [CP] Check Pods Manifest.lock */,
 				DB03583D2008402C00622A08 /* Sources */,
 				DB03583E2008402C00622A08 /* Frameworks */,
 				DB03583F2008402C00622A08 /* Resources */,
+				F0FB5324E946B7C5A03FCF5C /* [CP] Embed Pods Frameworks */,
+				53CF0D43F60AA2FE6386CB8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3B0371201549150037E7AD /* awsconfiguration.json in Resources */,
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
 				DB03582B2008402B00622A08 /* Main.storyboard in Resources */,
@@ -259,6 +312,160 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E723929DF5CE5CE836DF9AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarrior/Pods-WeekendWarrior-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarrior/Pods-WeekendWarrior-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		393C78390416C0BD3D0DA43B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarriorTests/Pods-WeekendWarriorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53CF0D43F60AA2FE6386CB8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarriorUITests/Pods-WeekendWarriorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A64A0BFAFA113BE07DBA8CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeekendWarrior-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DFDCA0A0026E16E83E138F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeekendWarriorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4FE50F5F33752D76E736D81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeekendWarriorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7E2BEEB273CFB8B2F824875 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarrior/Pods-WeekendWarrior-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0FB5324E946B7C5A03FCF5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarriorUITests/Pods-WeekendWarriorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2E067EC9AA79EA9E535DB4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarriorTests/Pods-WeekendWarriorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB03581A2008402B00622A08 /* Sources */ = {
@@ -432,6 +639,7 @@
 		};
 		DB03584B2008402C00622A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4A55D94DC39248362806D3 /* Pods-WeekendWarrior.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +654,7 @@
 		};
 		DB03584C2008402C00622A08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D042B678E10DEDC5559D315 /* Pods-WeekendWarrior.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +669,7 @@
 		};
 		DB03584E2008402C00622A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7A691F643921E9C108F6A09 /* Pods-WeekendWarriorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -476,6 +686,7 @@
 		};
 		DB03584F2008402C00622A08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AD5400F51875CB48F8FD54 /* Pods-WeekendWarriorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +703,7 @@
 		};
 		DB0358512008402C00622A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BA9B5FA3CCFF00DFC299E3D /* Pods-WeekendWarriorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +719,7 @@
 		};
 		DB0358522008402C00622A08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 492A77B6CFA35E2EED744B8D /* Pods-WeekendWarriorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
