@@ -9,16 +9,20 @@
 import UIKit
 import AWSMobileClient
 import AWSCore
+import AWSPinpoint
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var pinpoint: AWSPinpoint?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
         AWSDDLog.sharedInstance.logLevel = .info
+        pinpoint = AWSPinpoint(configuration:
+            AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
