@@ -10,6 +10,7 @@ import UIKit
 import AWSMobileClient
 import AWSCore
 import AWSPinpoint
+import AWSDynamoDB
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
