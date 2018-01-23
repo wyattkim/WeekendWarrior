@@ -19,8 +19,8 @@
 		DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB03582E2008402B00622A08 /* LaunchScreen.storyboard */; };
 		DB03583B2008402C00622A08 /* WeekendWarriorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03583A2008402C00622A08 /* WeekendWarriorTests.swift */; };
 		DB0358462008402C00622A08 /* WeekendWarriorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */; };
-		DBB9A55D2016A37900C095F4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DBB9A55C2016A37900C095F4 /* awsconfiguration.json */; };
-		DBB9A55F2016A49E00C095F4 /* Trails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB9A55E2016A49E00C095F4 /* Trails.swift */; };
+		DB99D3FE2016D0F200B8AFBD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DB99D3FD2016D0F200B8AFBD /* awsconfiguration.json */; };
+		DB99D4002016D11300B8AFBD /* Trails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB99D3FF2016D11300B8AFBD /* Trails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,8 @@
 		DB0358412008402C00622A08 /* WeekendWarriorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekendWarriorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorUITests.swift; sourceTree = "<group>"; };
 		DB0358472008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBB9A55C2016A37900C095F4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
-		DBB9A55E2016A49E00C095F4 /* Trails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trails.swift; sourceTree = "<group>"; };
+		DB99D3FD2016D0F200B8AFBD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		DB99D3FF2016D11300B8AFBD /* Trails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +145,8 @@
 		DB0358202008402B00622A08 /* WeekendWarrior */ = {
 			isa = PBXGroup;
 			children = (
-				DBB9A55E2016A49E00C095F4 /* Trails.swift */,
-				DBB9A55C2016A37900C095F4 /* awsconfiguration.json */,
+				DB99D3FF2016D11300B8AFBD /* Trails.swift */,
+				DB99D3FD2016D0F200B8AFBD /* awsconfiguration.json */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
 				DB0358252008402B00622A08 /* DataViewController.swift */,
@@ -293,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBB9A55D2016A37900C095F4 /* awsconfiguration.json in Resources */,
+				DB99D3FE2016D0F200B8AFBD /* awsconfiguration.json in Resources */,
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
 				DB03582B2008402B00622A08 /* Main.storyboard in Resources */,
@@ -479,7 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBB9A55F2016A49E00C095F4 /* Trails.swift in Sources */,
+				DB99D4002016D11300B8AFBD /* Trails.swift in Sources */,
 				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
 				DB0358282008402B00622A08 /* ModelController.swift in Sources */,
 				DB0358262008402B00622A08 /* DataViewController.swift in Sources */,

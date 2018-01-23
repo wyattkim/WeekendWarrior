@@ -28,7 +28,7 @@ class Trails: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _ratings: Set<NSNumber>?
     var _reviews: Set<String>?
     var _season: String?
-    var _status: Data?
+    var _status: String?
     
     class func dynamoDBTableName() -> String {
 
