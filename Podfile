@@ -7,6 +7,8 @@ target 'WeekendWarrior' do
   	pod 'AWSMobileClient', '~> 2.6.6'
 	pod 'AWSPinpoint', '~> 2.6.6'
 	pod 'AWSDynamoDB', '~> 2.6.6'
+    pod 'AWSUserPoolsSignIn', '~> 2.6.6'
+    pod 'AWSAuthUI', '~> 2.6.6'
 
   # Pods for WeekendWarrior
 
