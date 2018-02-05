@@ -26,7 +26,7 @@
 - (IBAction)distanceSliderChanged:(id)sender {
     // Set the label text to the value of the slider as it changes
     self.hourDistanceLabel.text = [NSString stringWithFormat:@"%d hr",
-        (int) roundf(self.hourDistancePicker.value * 9) + 1];
+                                   (int) roundf(self.hourDistancePicker.value * 9) + 1];
     
     
 }
@@ -41,4 +41,7 @@
 }
 
 
+- (IBAction)hourDistancePickerr:(id)sender {
+}
 @end
+

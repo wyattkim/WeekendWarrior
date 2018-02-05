@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *clickyButton;
 @property (weak, nonatomic) IBOutlet UILabel *motto;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
+
+
 @property (weak, nonatomic) IBOutlet UISlider *hourDistancePicker;
 @property (weak, nonatomic) IBOutlet UILabel *hourDistanceLabel;
 @property (weak, nonatomic) IBOutlet UIDatePicker *myDatePicker;
