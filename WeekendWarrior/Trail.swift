@@ -15,13 +15,13 @@ import Foundation
 import UIKit
 import AWSDynamoDB
 
-class Trails: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
+class Trail: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     var _userId: String?
     var _trailId: String?
-    var _difficulty: NSNumber?
+    var _difficulty: String?
     var _equipmentInfo: String?
-    var _length: String?
+    var _distance: String?
     var _location: String?
     var _name: String?
     var _permitInfo: String?
@@ -29,6 +29,25 @@ class Trails: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _reviews: Set<String>?
     var _season: String?
     var _status: String?
+    var _photo: UIImage?
+    
+    //MARK: Initialization
+    init?(name: String, photo: UIImage?, status: String, difficulty: String, distance: String) {
+        super.init()
+        guard !name.isEmpty else {
+            return nil
+        }
+        
+        self._name = name
+        self._photo = photo
+        self._status = status
+        self._difficulty = difficulty
+        self._distance = distance
+    }
+    
+    required init!(coder: NSCoder!) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     class func dynamoDBTableName() -> String {
 
@@ -51,7 +70,7 @@ class Trails: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_trailId" : "trailId",
                "_difficulty" : "difficulty",
                "_equipmentInfo" : "equipmentInfo",
-               "_length" : "length",
+               "_distance" : "distance",
                "_location" : "location",
                "_name" : "name",
                "_permitInfo" : "permitInfo",
