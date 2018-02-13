@@ -18,6 +18,7 @@ PODS:
   - AWSUserPoolsSignIn (2.6.11):
     - AWSAuthCore (= 2.6.11)
     - AWSCognitoIdentityProvider (= 2.6.11)
+  - CSV.swift (2.1.0)
 
 DEPENDENCIES:
   - AWSAuthUI (~> 2.6.6)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - AWSMobileClient (~> 2.6.6)
   - AWSPinpoint (~> 2.6.6)
   - AWSUserPoolsSignIn (~> 2.6.6)
+  - CSV.swift (~> 2.1.0)
 
 SPEC CHECKSUMS:
   AWSAuthCore: 400f64223dc7509bf2c2b320c25f03c9281e2aac
@@ -36,7 +38,8 @@ SPEC CHECKSUMS:
   AWSMobileClient: 6ba0612943c6dee6b7a5bdf288296c6a8dfffb13
   AWSPinpoint: d8b60d18bb6bbfefda68659d3e4dac64893f2596
   AWSUserPoolsSignIn: 97a1023f253b01400960ba869053a9a061a0c5e8
+  CSV.swift: a24fb11c17875523783fe963592762ff163ef8ea
 
-PODFILE CHECKSUM: fcf1a871b036be233f6c6427885b7237c54c741b
+PODFILE CHECKSUM: 792a17c733cb2885639258f1ba825faca48942e3
 
 COCOAPODS: 1.4.0

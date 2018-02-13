@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSDynamoDB
 
 class TrailTableViewController: UITableViewController {
     //MARK: Properties
@@ -16,6 +17,8 @@ class TrailTableViewController: UITableViewController {
         super.viewDidLoad()
         
         loadSampleTrails()
+        
+        //createSampleTrail()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -53,10 +56,8 @@ class TrailTableViewController: UITableViewController {
         let trail = trails[indexPath.row]
         
         cell.nameLabel.text = trail._name
-        cell.photoImageView.image = trail._photo
         cell.statusLabel.text = trail._status
-        cell.difficultyLabel.text = trail._difficulty
-        cell.distanceLabel.text = trail._distance
+        cell.distanceLabel.text = "\(trail._latitude) + \(trail._longitude)"
         
         return cell
     }
@@ -109,20 +110,35 @@ class TrailTableViewController: UITableViewController {
 
     //MARK: Private methods
     private func loadSampleTrails() {
-        let photo1 = UIImage(named: "mtWhitneyPhoto")
-        let photo2 = UIImage(named: "transCatalinaTrailPhoto")
-        let photo3 = UIImage(named: "sykesHotSpringsPhoto")
+//        let photo1 = UIImage(named: "mtWhitneyPhoto")
+//        let photo2 = UIImage(named: "transCatalinaTrailPhoto")
+//        let photo3 = UIImage(named: "sykesHotSpringsPhoto")
         
-        guard let trail1 = Trail(name: "Mt. Whitney", photo: photo1, status: "Open", difficulty: "Medium", distance: "11.1 miles away") else {
-            fatalError("Unable to instantiate trail1")
-        }
-        guard let trail2 = Trail(name: "Trans-Catalina Trail", photo: photo2, status: "Open", difficulty: "Easy", distance: "23.3 miles away") else {
-            fatalError("Unable to instantiate trail2")
-        }
-        guard let trail3 = Trail(name: "Sykes Hot Springs", photo: photo3, status: "Closed", difficulty: "Hard", distance: "6.2 miles away") else {
-            fatalError("Unable to instantiate trail3")
-        }
+//        guard let trail1 = Trail(name: "Mt. Whitney", status: "Open", difficulty: "Medium", location: "11.1 miles away") else {
+//            fatalError("Unable to instantiate trail1")
+//        }
+//        guard let trail2 = Trail(name: "Trans-Catalina Trail", status: "Open", difficulty: "Easy", location: "23.3 miles away") else {
+//            fatalError("Unable to instantiate trail2")
+//        }
+//        guard let trail3 = Trail(name: "Sykes Hot Springs", status: "Closed", difficulty: "Hard", location: "6.2 miles away") else {
+//            fatalError("Unable to instantiate trail3")
+//        }
         
-        trails += [trail1, trail2, trail3]
+//        trails += [trail1, trail2, trail3]
     }
+    
+//    private func createSampleTrail() {
+//        let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
+//
+//        let sampleTrail: Trail = Trail(userId: "admin", difficulty: "Easy", equipmentInfo: "None", location: "500 miles way", name: "Tennessee Valley Trail", permitInfo: "None", status: "Open", trailId: "0")
+//
+//        dynamoDbObjectMapper.save(sampleTrail, completionHandler: {
+//            (error: Error?) -> Void in
+//            if let error = error {
+//                print("AWS DynamoDB save error: \(error)")
+//                return
+//            }
+//            print("A trail was saved")
+//        })
+//    }
 }

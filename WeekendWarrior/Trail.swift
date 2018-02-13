@@ -1,5 +1,5 @@
 //
-//  Trails.swift
+//  Trail.swift
 //  MySampleApp
 //
 //
@@ -17,66 +17,30 @@ import AWSDynamoDB
 
 class Trail: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
-    var _userId: String?
     var _trailId: String?
-    var _difficulty: String?
-    var _equipmentInfo: String?
-    var _distance: String?
-    var _location: String?
+    var _description: String?
+    var _latitude: String?
+    var _longitude: String?
     var _name: String?
-    var _permitInfo: String?
-    var _ratings: Set<NSNumber>?
-    var _reviews: Set<String>?
-    var _season: String?
     var _status: String?
-    var _photo: UIImage?
-    
-    //MARK: Initialization
-    init?(name: String, photo: UIImage?, status: String, difficulty: String, distance: String) {
-        super.init()
-        guard !name.isEmpty else {
-            return nil
-        }
-        
-        self._name = name
-        self._photo = photo
-        self._status = status
-        self._difficulty = difficulty
-        self._distance = distance
-    }
-    
-    required init!(coder: NSCoder!) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     class func dynamoDBTableName() -> String {
 
-        return "weekendwarrior-mobilehub-375828022-Trails"
+        return "weekendwarrior-mobilehub-375828022-Trail"
     }
     
     class func hashKeyAttribute() -> String {
-
-        return "_userId"
-    }
-    
-    class func rangeKeyAttribute() -> String {
 
         return "_trailId"
     }
     
     override class func jsonKeyPathsByPropertyKey() -> [AnyHashable: Any] {
         return [
-               "_userId" : "userId",
                "_trailId" : "trailId",
-               "_difficulty" : "difficulty",
-               "_equipmentInfo" : "equipmentInfo",
-               "_distance" : "distance",
-               "_location" : "location",
+               "_description" : "description",
+               "_latitude" : "latitude",
+               "_longitude" : "longitude",
                "_name" : "name",
-               "_permitInfo" : "permitInfo",
-               "_ratings" : "ratings",
-               "_reviews" : "reviews",
-               "_season" : "season",
                "_status" : "status",
         ]
     }

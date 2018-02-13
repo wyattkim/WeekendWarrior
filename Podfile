@@ -9,6 +9,7 @@ target 'WeekendWarrior' do
 	pod 'AWSDynamoDB', '~> 2.6.6'
     pod 'AWSUserPoolsSignIn', '~> 2.6.6'
     pod 'AWSAuthUI', '~> 2.6.6'
+    pod 'CSV.swift', '~> 2.1.0'
 
   # Pods for WeekendWarrior
 
