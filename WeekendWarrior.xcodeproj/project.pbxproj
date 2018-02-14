@@ -26,7 +26,6 @@
 		DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE55B37201FEE3C007337C0 /* ViewController.m */; };
 		E78456322027BBBE00CA4717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78456312027BBBE00CA4717 /* Main.storyboard */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
-		E78575D72033E74D00E91AFC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E78575D62033E74D00E91AFC /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,6 @@
 		E78456312027BBBE00CA4717 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E78456332027BBDE00CA4717 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E78575D62033E74D00E91AFC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				DB12DB412032881600B2421C /* weekend-warrior-data.csv */,
-				E78575D62033E74D00E91AFC /* background.png */,
 				DB12DB3D2032731C00B2421C /* awsconfiguration.json */,
 				DB12DB3F203273A600B2421C /* Trail.swift */,
 				E78456312027BBBE00CA4717 /* Main.storyboard */,
@@ -319,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB12DB4320328A5E00B2421C /* weekend-warrior-data.csv in Resources */,
-				E78575D72033E74D00E91AFC /* background.png in Resources */,
 				DB12DB3E2032731C00B2421C /* awsconfiguration.json in Resources */,
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
