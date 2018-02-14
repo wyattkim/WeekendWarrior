@@ -44,4 +44,5 @@ class Trail: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_status" : "status",
         ]
     }
+    
 }

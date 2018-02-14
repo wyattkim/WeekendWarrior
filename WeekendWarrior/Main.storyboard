@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9av-mv-xuq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,18 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
-        <scene sceneID="sY8-lE-mW0">
-            <objects>
-                <viewController id="gVR-rj-H8U" customClass="LoginViewController" customModule="WeekendWarrior" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="SsR-xY-awd">
-                        <barButtonItem key="rightBarButtonItem" title="Skip" id="sMS-la-0E9"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0MC-cf-Ung" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-226" y="133"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -131,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zzk-5R-BP9">
-                                <rect key="frame" x="58" y="139" width="258" height="92"/>
+                                <rect key="frame" x="58" y="139" width="259" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="L5Q-FN-uTS"/>
                                 </constraints>
@@ -140,14 +128,14 @@
                                 </date>
                             </datePicker>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6hN-dx-b0b">
-                                <rect key="frame" x="93" y="381" width="243" height="30"/>
+                                <rect key="frame" x="93.5" y="381" width="243" height="30"/>
                                 <connections>
                                     <action selector="distanceSliderChanged:" destination="9wT-eU-nG8" eventType="valueChanged" id="Tpn-bd-Maq"/>
                                     <action selector="distanceSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="h9P-8q-VNJ"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 hr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb8-QG-zPF">
-                                <rect key="frame" x="41" y="385" width="31" height="21"/>
+                                <rect key="frame" x="41.5" y="385" width="31" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="G4a-EF-xwk"/>
                                 </constraints>
@@ -156,7 +144,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour range willing to drive (each way):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le4-1c-K9h">
-                                <rect key="frame" x="41" y="352" width="293" height="21"/>
+                                <rect key="frame" x="41.5" y="352" width="293" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gWR-vW-Zyg"/>
                                 </constraints>
@@ -165,7 +153,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depart:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuf-Be-Iax">
-                                <rect key="frame" x="158" y="110" width="58" height="21"/>
+                                <rect key="frame" x="158.5" y="110" width="58" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VRq-vc-PMe"/>
                                 </constraints>
@@ -174,13 +162,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xH1-zV-V0C">
-                                <rect key="frame" x="58" y="268" width="258" height="48"/>
+                                <rect key="frame" x="58" y="268" width="259" height="48"/>
                                 <date key="date" timeIntervalSinceReferenceDate="538534506.92409003">
                                     <!--2018-01-25 00:55:06 +0000-->
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeD-eQ-3wH">
-                                <rect key="frame" x="158" y="239" width="56" height="21"/>
+                                <rect key="frame" x="158.5" y="239" width="56" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Omh-2f-1iD"/>
                                 </constraints>
@@ -189,7 +177,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BNz-hs-hXM">
-                                <rect key="frame" x="72" y="491" width="231" height="29"/>
+                                <rect key="frame" x="72" y="491" width="232" height="29"/>
                                 <segments>
                                     <segment title="Easy"/>
                                     <segment title="Medium"/>
@@ -197,14 +185,14 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVQ-AX-C7t">
-                                <rect key="frame" x="124" y="580" width="127" height="30"/>
+                                <rect key="frame" x="124.5" y="580" width="127" height="30"/>
                                 <state key="normal" title="Plan My Weekend!"/>
                                 <connections>
                                     <segue destination="skk-8h-L1E" kind="show" id="3vn-41-fJf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-vM-8as">
-                                <rect key="frame" x="151" y="454" width="73" height="21"/>
+                                <rect key="frame" x="151.5" y="454" width="73" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="pjC-NL-aVH"/>
                                 </constraints>
@@ -213,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgQ-vg-RNc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -330,6 +318,9 @@
                             <outlet property="delegate" destination="skk-8h-L1E" id="WBg-hY-BMX"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="trailTable" destination="meV-q4-m7e" id="GMu-Yh-ajb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4e9-SC-rZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -352,24 +343,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23b-95-U6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1120.8" y="131.78410794602701"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="SaO-VU-7Ag">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9av-mv-xuq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lNB-JK-2x7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gVR-rj-H8U" kind="relationship" relationship="rootViewController" id="zEn-kq-InQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bIE-gH-USp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-804" y="121"/>
         </scene>
     </scenes>
     <resources>

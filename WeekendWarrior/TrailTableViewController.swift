@@ -7,16 +7,25 @@
 //
 
 import UIKit
+import AWSAuthUI
+import AWSAuthCore
 import AWSDynamoDB
+import CSV
 
 class TrailTableViewController: UITableViewController {
     //MARK: Properties
     var trails = [Trail]()
+    @IBOutlet var trailTable: UITableView!
+    
 
     override func viewDidLoad() {
+        readSampleTrail()
+
         super.viewDidLoad()
         
         loadSampleTrails()
+        trailTable.delegate = self
+        trailTable.dataSource = self
         
         //createSampleTrail()
 
@@ -25,6 +34,44 @@ class TrailTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    private func readSampleTrail() {
+        for index in 0...2 {
+            let queryExpression = AWSDynamoDBQueryExpression()
+            queryExpression.keyConditionExpression = "#trailId = :trailId"
+            
+            queryExpression.expressionAttributeNames = [
+                "#trailId": "trailId"
+            ]
+            queryExpression.expressionAttributeValues = [
+                ":trailId": "\(index)"
+            ]
+            
+            let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
+            
+            dynamoDbObjectMapper.query(Trail.self, expression: queryExpression) { (output: AWSDynamoDBPaginatedOutput?, error: Error?) in
+                if error != nil {
+                    print("The request failed. Error: \(String(describing: error))")
+                }
+                if output != nil {
+                    for news in output!.items {
+                        let newsItem = news as? Trail
+                        self.trails += [newsItem!];
+                        print("name: \(newsItem!._name!)")
+                        print("trailId: \(newsItem!._trailId!)")
+                        print("status: \(newsItem!._status!)")
+                        print("description: \(newsItem!._description!)")
+                        print("latitude: \(newsItem!._latitude!)")
+                        print("longitude: \(newsItem!._longitude!)")
+                    }
+                    DispatchQueue.main.async {
+                        self.trailTable.reloadData()
+                    }
+                }
+            }
+        }
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,8 +104,6 @@ class TrailTableViewController: UITableViewController {
         
         cell.nameLabel.text = trail._name
         cell.statusLabel.text = trail._status
-        cell.distanceLabel.text = "\(trail._latitude) + \(trail._longitude)"
-        
         return cell
     }
  
