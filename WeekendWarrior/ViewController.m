@@ -18,6 +18,8 @@
     [super viewDidLoad];
 
     self.myDatePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    self.clickyButton.layer.cornerRadius = 10;
+    self.clickyButton.clipsToBounds = true;
 }
 
 - (IBAction)handleSearchClick:(id)sender {

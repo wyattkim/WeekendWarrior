@@ -104,6 +104,8 @@ class TrailTableViewController: UITableViewController {
         
         cell.nameLabel.text = trail._name
         cell.statusLabel.text = trail._status
+        cell.difficultyLabel.text = "Temp Difficulty"
+        cell.distanceLabel.text = "Temp Distance"
         return cell
     }
  
