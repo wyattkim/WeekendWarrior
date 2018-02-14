@@ -108,6 +108,11 @@ class TrailTableViewController: UITableViewController {
         cell.distanceLabel.text = "Temp Distance"
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("section: \(indexPath.section)")
+        print("row: \(indexPath.row)")
+    }
  
 
     /*

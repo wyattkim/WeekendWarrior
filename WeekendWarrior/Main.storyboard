@@ -363,10 +363,10 @@
             </objects>
             <point key="canvasLocation" x="2141.5999999999999" y="134.48275862068968"/>
         </scene>
-        <!--View Controller-->
+        <!--Trail Display Controller-->
         <scene sceneID="lA7-Ag-JRW">
             <objects>
-                <viewController id="sp5-vJ-ORz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrailDisplayController" id="sp5-vJ-ORz" customClass="TrailDisplayController" customModule="WeekendWarrior" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZn-fv-inj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
