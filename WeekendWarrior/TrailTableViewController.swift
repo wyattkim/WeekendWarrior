@@ -37,7 +37,7 @@ class TrailTableViewController: UITableViewController {
     }
     
     private func readSampleTrail() {
-        for index in 0...2 {
+        for index in 0...15 {
             let queryExpression = AWSDynamoDBQueryExpression()
             queryExpression.keyConditionExpression = "#trailId = :trailId"
             
