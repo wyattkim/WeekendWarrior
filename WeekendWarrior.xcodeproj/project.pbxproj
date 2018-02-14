@@ -23,11 +23,10 @@
 		DB12DB4320328A5E00B2421C /* weekend-warrior-data.csv in Resources */ = {isa = PBXBuildFile; fileRef = DB12DB412032881600B2421C /* weekend-warrior-data.csv */; };
 		DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */; };
 		DB1A7EAC202A69A200210E6C /* TrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7EAB202A69A200210E6C /* TrailTableViewController.swift */; };
-		DB1A7EB6202BD54C00210E6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7EB5202BD54C00210E6C /* LoginViewController.swift */; };
 		DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE55B37201FEE3C007337C0 /* ViewController.m */; };
 		E78456322027BBBE00CA4717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78456312027BBBE00CA4717 /* Main.storyboard */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
-		E78456382027BBE500CA4717 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456372027BBE500CA4717 /* ResultsViewController.m */; };
+		E78575D72033E74D00E91AFC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E78575D62033E74D00E91AFC /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,20 +70,18 @@
 		DB0358412008402C00622A08 /* WeekendWarriorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekendWarriorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorUITests.swift; sourceTree = "<group>"; };
 		DB0358472008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB12DB3D2032731C00B2421C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		DB12DB3D2032731C00B2421C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		DB12DB3F203273A600B2421C /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
 		DB12DB412032881600B2421C /* weekend-warrior-data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "weekend-warrior-data.csv"; sourceTree = "<group>"; };
 		DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTableViewCell.swift; sourceTree = "<group>"; };
 		DB1A7EAB202A69A200210E6C /* TrailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTableViewController.swift; sourceTree = "<group>"; };
-		DB1A7EB5202BD54C00210E6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DBE55B36201FEE3B007337C0 /* WeekendWarrior-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeekendWarrior-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBE55B37201FEE3C007337C0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBE55B39201FEE47007337C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E78456312027BBBE00CA4717 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E78456332027BBDE00CA4717 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		E78456362027BBE400CA4717 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
-		E78456372027BBE500CA4717 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		E78575D62033E74D00E91AFC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DB12DB412032881600B2421C /* weekend-warrior-data.csv */,
+				E78575D62033E74D00E91AFC /* background.png */,
 				DB12DB3D2032731C00B2421C /* awsconfiguration.json */,
 				DB12DB3F203273A600B2421C /* Trail.swift */,
 				E78456312027BBBE00CA4717 /* Main.storyboard */,
@@ -172,8 +170,6 @@
 				DBE55B37201FEE3C007337C0 /* ViewController.m */,
 				E78456332027BBDE00CA4717 /* SecondViewController.h */,
 				E78456342027BBDE00CA4717 /* SecondViewController.m */,
-				E78456362027BBE400CA4717 /* ResultsViewController.h */,
-				E78456372027BBE500CA4717 /* ResultsViewController.m */,
 				DB1A7EAB202A69A200210E6C /* TrailTableViewController.swift */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
@@ -183,7 +179,6 @@
 				DB03582E2008402B00622A08 /* LaunchScreen.storyboard */,
 				DB0358312008402C00622A08 /* Info.plist */,
 				DBE55B36201FEE3B007337C0 /* WeekendWarrior-Bridging-Header.h */,
-				DB1A7EB5202BD54C00210E6C /* LoginViewController.swift */,
 			);
 			path = WeekendWarrior;
 			sourceTree = "<group>";
@@ -324,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB12DB4320328A5E00B2421C /* weekend-warrior-data.csv in Resources */,
+				E78575D72033E74D00E91AFC /* background.png in Resources */,
 				DB12DB3E2032731C00B2421C /* awsconfiguration.json in Resources */,
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
@@ -525,12 +521,10 @@
 				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
 				DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */,
 				DB1A7EAC202A69A200210E6C /* TrailTableViewController.swift in Sources */,
-				E78456382027BBE500CA4717 /* ResultsViewController.m in Sources */,
 				E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */,
 				DB0358282008402B00622A08 /* ModelController.swift in Sources */,
 				DB0358262008402B00622A08 /* DataViewController.swift in Sources */,
 				DB0358222008402B00622A08 /* AppDelegate.swift in Sources */,
-				DB1A7EB6202BD54C00210E6C /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
