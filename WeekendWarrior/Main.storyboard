@@ -357,6 +357,7 @@
                     </tableView>
                     <connections>
                         <outlet property="trailTable" destination="meV-q4-m7e" id="GMu-Yh-ajb"/>
+                        <segue destination="sp5-vJ-ORz" kind="show" identifier="segueme" id="eMZ-7o-Pze"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4e9-SC-rZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,16 +368,15 @@
         <scene sceneID="lA7-Ag-JRW">
             <objects>
                 <viewController storyboardIdentifier="TrailDisplayController" id="sp5-vJ-ORz" customClass="TrailDisplayController" customModule="WeekendWarrior" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KZn-fv-inj">
+                    <view key="view" contentMode="scaleToFill" id="KZn-fv-inj" customClass="TrailTableViewCell" customModule="WeekendWarrior" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-G9-ral">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transCatalinaTrailPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-G9-ral">
                                 <rect key="frame" x="67" y="100" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Trail Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lb-2G-E7f">
-                                <rect key="frame" x="90" y="52" width="194" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lb-2G-E7f">
+                                <rect key="frame" x="90" y="52" width="194" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="yjv-7e-LKs"/>
                                 </constraints>
@@ -385,9 +385,8 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwl-tw-tEc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwl-tw-tEc">
                                 <rect key="frame" x="34" y="283" width="306" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Trail description blah blah blah blah lksjdlgjas; sldkjg ksdksd lsdjdkdk dsk sdkjlsk gkdskl sld lgk sldk g lsd ">
                                         <attributes>
@@ -399,9 +398,32 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPK-gW-pPb">
-                                <rect key="frame" x="43" y="264" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGX-7p-VVz">
+                                <rect key="frame" x="159" y="270.5" width="101" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="htq-yK-Pbz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="0.12670719620000001" green="0.24099060889999999" blue="0.47354984280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08E-u8-gA3">
+                                <rect key="frame" x="258" y="270" width="101" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eOu-Gm-GsG"/>
+                                    <constraint firstAttribute="width" constant="101" id="uS6-u0-d2D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="0.12670719620000001" green="0.24099060889999999" blue="0.47354984280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPK-gW-pPb">
+                                <rect key="frame" x="43" y="266" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Fo9-2q-KX7"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Open">
                                         <attributes>
@@ -415,6 +437,26 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.57483464479446411" green="0.84264403581619263" blue="0.91857093572616577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2vE-eh-UMg" firstAttribute="trailing" secondItem="tGX-7p-VVz" secondAttribute="trailing" constant="115" id="3iK-xg-zlL"/>
+                            <constraint firstItem="zTG-G9-ral" firstAttribute="centerX" secondItem="kwl-tw-tEc" secondAttribute="centerX" id="9tL-uu-CXK"/>
+                            <constraint firstItem="nPK-gW-pPb" firstAttribute="leading" secondItem="2vE-eh-UMg" secondAttribute="leading" constant="43" id="B5l-mt-oHi"/>
+                            <constraint firstItem="2vE-eh-UMg" firstAttribute="bottom" secondItem="kwl-tw-tEc" secondAttribute="bottom" constant="259" id="Npi-Cm-fLg"/>
+                            <constraint firstItem="kwl-tw-tEc" firstAttribute="leading" secondItem="2vE-eh-UMg" secondAttribute="leading" constant="34" id="Pmx-5W-5kE"/>
+                            <constraint firstItem="tGX-7p-VVz" firstAttribute="leading" secondItem="nPK-gW-pPb" secondAttribute="trailing" constant="74" id="Py8-df-FlP"/>
+                            <constraint firstItem="tGX-7p-VVz" firstAttribute="centerY" secondItem="08E-u8-gA3" secondAttribute="centerY" id="Qrm-Gf-XeE"/>
+                            <constraint firstItem="nPK-gW-pPb" firstAttribute="centerY" secondItem="tGX-7p-VVz" secondAttribute="centerY" constant="-4.5" id="Sni-vK-NJJ"/>
+                            <constraint firstItem="08E-u8-gA3" firstAttribute="top" secondItem="zTG-G9-ral" secondAttribute="bottom" constant="42" id="WSi-pw-yn0"/>
+                            <constraint firstItem="6Lb-2G-E7f" firstAttribute="centerX" secondItem="zTG-G9-ral" secondAttribute="centerX" id="YJB-fK-snI"/>
+                            <constraint firstItem="6Lb-2G-E7f" firstAttribute="leading" secondItem="2vE-eh-UMg" secondAttribute="leading" constant="90" id="au6-6Z-Xt6"/>
+                            <constraint firstItem="zTG-G9-ral" firstAttribute="leading" secondItem="2vE-eh-UMg" secondAttribute="leading" constant="67" id="d2l-nR-RJe"/>
+                            <constraint firstItem="kwl-tw-tEc" firstAttribute="top" secondItem="zTG-G9-ral" secondAttribute="bottom" constant="55" id="d95-Sd-C0c"/>
+                            <constraint firstItem="zTG-G9-ral" firstAttribute="top" secondItem="6Lb-2G-E7f" secondAttribute="bottom" constant="27" id="daM-rQ-KXz"/>
+                            <constraint firstItem="6Lb-2G-E7f" firstAttribute="top" secondItem="2vE-eh-UMg" secondAttribute="top" constant="32" id="e8E-Wd-uyl"/>
+                            <constraint firstItem="6Lb-2G-E7f" firstAttribute="centerX" secondItem="KZn-fv-inj" secondAttribute="centerX" id="iao-Ie-RnJ"/>
+                            <constraint firstItem="2vE-eh-UMg" firstAttribute="bottom" secondItem="08E-u8-gA3" secondAttribute="bottom" constant="376" id="owC-Yv-OOa"/>
+                            <constraint firstItem="08E-u8-gA3" firstAttribute="trailing" secondItem="KZn-fv-inj" secondAttribute="trailingMargin" id="ued-g7-r6h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2vE-eh-UMg"/>
                     </view>
                 </viewController>
@@ -426,6 +468,7 @@
     <resources>
         <image name="Image" width="1040" height="1362"/>
         <image name="defaultPhoto" width="540" height="540"/>
+        <image name="transCatalinaTrailPhoto" width="174" height="174"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ULl-yV-VKY"/>

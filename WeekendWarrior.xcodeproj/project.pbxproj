@@ -26,6 +26,7 @@
 		DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE55B37201FEE3C007337C0 /* ViewController.m */; };
 		E78456322027BBBE00CA4717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78456312027BBBE00CA4717 /* Main.storyboard */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
+		E7D063FD2034C9BE007CAEEF /* TrailDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E78456312027BBBE00CA4717 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E78456332027BBDE00CA4717 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDisplayController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				E78456332027BBDE00CA4717 /* SecondViewController.h */,
 				E78456342027BBDE00CA4717 /* SecondViewController.m */,
 				DB1A7EAB202A69A200210E6C /* TrailTableViewController.swift */,
+				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
 				DB0358252008402B00622A08 /* DataViewController.swift */,
@@ -521,6 +524,7 @@
 				DB0358282008402B00622A08 /* ModelController.swift in Sources */,
 				DB0358262008402B00622A08 /* DataViewController.swift in Sources */,
 				DB0358222008402B00622A08 /* AppDelegate.swift in Sources */,
+				E7D063FD2034C9BE007CAEEF /* TrailDisplayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
