@@ -110,8 +110,7 @@ class TrailTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueme", sender: nil)
-        
+        performSegue(withIdentifier: "segueme", sender: self)
         print("row: \(indexPath.row)")
     }
  

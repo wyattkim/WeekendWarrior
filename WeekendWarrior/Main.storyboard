@@ -357,7 +357,7 @@
                     </tableView>
                     <connections>
                         <outlet property="trailTable" destination="meV-q4-m7e" id="GMu-Yh-ajb"/>
-                        <segue destination="sp5-vJ-ORz" kind="show" identifier="segueme" id="eMZ-7o-Pze"/>
+                        <segue destination="sp5-vJ-ORz" kind="show" identifier="segueme" id="nSX-Xk-k9f"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4e9-SC-rZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -435,6 +435,19 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.58319593008995918" green="1" blue="0.60448862793865965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdR-ML-JOI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="CzT-6f-WLE">
+                                        <barButtonItem key="leftBarButtonItem" title="Back to Results" id="Oun-6V-pCZ">
+                                            <connections>
+                                                <segue destination="skk-8h-L1E" kind="show" id="nOS-dZ-lvn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.57483464479446411" green="0.84264403581619263" blue="0.91857093572616577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -459,10 +472,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2vE-eh-UMg"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ehv-NZ-F4I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EN-Aj-Wxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2840.8000000000002" y="136.28185907046478"/>
+            <point key="canvasLocation" x="3180" y="136.28185907046478"/>
         </scene>
     </scenes>
     <resources>
@@ -471,6 +485,7 @@
         <image name="transCatalinaTrailPhoto" width="174" height="174"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="nOS-dZ-lvn"/>
         <segue reference="ULl-yV-VKY"/>
     </inferredMetricsTieBreakers>
 </document>
