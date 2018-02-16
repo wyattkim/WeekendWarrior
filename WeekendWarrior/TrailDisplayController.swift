@@ -9,11 +9,13 @@
 import UIKit
 
 class TrailDisplayController: UIViewController {
-
+    var trail = Trail()
+    @IBOutlet weak var trailName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        trailName.text = trail?._name
         
-
         // Do any additional setup after loading the view.
     }
 

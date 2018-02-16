@@ -110,8 +110,11 @@ class TrailTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueme", sender: self)
-        print("row: \(indexPath.row)")
+        let selectedTrail = trails[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let testController = storyboard.instantiateViewController(withIdentifier :"TrailDisplayController") as! TrailDisplayController
+        testController.trail = selectedTrail
+        self.present(testController, animated: true)
     }
  
 

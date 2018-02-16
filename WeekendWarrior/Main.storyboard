@@ -380,7 +380,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="yjv-7e-LKs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" red="0.12670719620000001" green="0.24099060889999999" blue="0.47354984280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -473,6 +473,9 @@
                         <viewLayoutGuide key="safeArea" id="2vE-eh-UMg"/>
                     </view>
                     <navigationItem key="navigationItem" id="ehv-NZ-F4I"/>
+                    <connections>
+                        <outlet property="trailName" destination="6Lb-2G-E7f" id="Ttv-HU-WpP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EN-Aj-Wxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
