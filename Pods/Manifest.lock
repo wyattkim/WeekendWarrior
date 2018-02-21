@@ -19,6 +19,16 @@ PODS:
     - AWSAuthCore (= 2.6.11)
     - AWSCognitoIdentityProvider (= 2.6.11)
   - CSV.swift (2.1.0)
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.6.0):
+    - GoogleMaps (= 2.6.0)
+    - GooglePlaces (= 2.6.0)
+  - GooglePlaces (2.6.0):
+    - GoogleMaps/Base (= 2.6.0)
 
 DEPENDENCIES:
   - AWSAuthUI (~> 2.6.6)
@@ -27,6 +37,9 @@ DEPENDENCIES:
   - AWSPinpoint (~> 2.6.6)
   - AWSUserPoolsSignIn (~> 2.6.6)
   - CSV.swift (~> 2.1.0)
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
 
 SPEC CHECKSUMS:
   AWSAuthCore: 400f64223dc7509bf2c2b320c25f03c9281e2aac
@@ -39,7 +52,10 @@ SPEC CHECKSUMS:
   AWSPinpoint: d8b60d18bb6bbfefda68659d3e4dac64893f2596
   AWSUserPoolsSignIn: 97a1023f253b01400960ba869053a9a061a0c5e8
   CSV.swift: a24fb11c17875523783fe963592762ff163ef8ea
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  GooglePlacePicker: e4488625effb006f59de49e14b7a603e463e4261
+  GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
 
-PODFILE CHECKSUM: 792a17c733cb2885639258f1ba825faca48942e3
+PODFILE CHECKSUM: f55522f6b6aeed44cd23a3063c02395413407a4a
 
 COCOAPODS: 1.4.0

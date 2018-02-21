@@ -10,6 +10,9 @@ target 'WeekendWarrior' do
     pod 'AWSUserPoolsSignIn', '~> 2.6.6'
     pod 'AWSAuthUI', '~> 2.6.6'
     pod 'CSV.swift', '~> 2.1.0'
+    pod 'GooglePlaces'
+    pod 'GooglePlacePicker'
+    pod 'GoogleMaps'
 
   # Pods for WeekendWarrior
 
