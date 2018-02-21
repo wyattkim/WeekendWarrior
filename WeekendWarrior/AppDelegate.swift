@@ -11,6 +11,8 @@ import AWSMobileClient
 import AWSCore
 import AWSPinpoint
 import AWSDynamoDB
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
 //        AWSDDLog.sharedInstance.logLevel = .info
 //        pinpoint = AWSPinpoint(configuration: AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
+        GMSPlacesClient.provideAPIKey("AIzaSyBF0jWWbPyIPDDB9GNkmnRaAacvMBXIw10")
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
