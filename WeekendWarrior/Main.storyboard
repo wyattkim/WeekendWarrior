@@ -29,14 +29,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="rCf-3E-dE0">
                                 <rect key="frame" x="0.0" y="0.0" width="383" height="667"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5f6-SW-2s8">
-                                <rect key="frame" x="96" y="190" width="185" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blv-h9-VMj">
-                                <rect key="frame" x="31" y="77" width="313" height="43"/>
+                                <rect key="frame" x="40" y="52" width="302" height="43"/>
                                 <attributedString key="attributedText">
                                     <fragment content="WeekendWarrior">
                                         <attributes>
@@ -48,12 +42,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyS-d8-yqB">
-                                <rect key="frame" x="108" y="249" width="160" height="32"/>
-                                <color key="backgroundColor" red="0.98515909910202026" green="0.77251797914505005" blue="0.71609467267990112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyS-d8-yqB">
+                                <rect key="frame" x="115" y="235" width="152" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Plan My Weekend!">
-                                    <color key="titleColor" red="0.093661583960056305" green="0.22087514400482178" blue="0.46186423301696777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -64,38 +60,26 @@
                                     <segue destination="9wT-eU-nG8" kind="show" identifier="optionsSegue" id="FpK-2Y-BKj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your home base:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCb-mC-60K">
-                                <rect key="frame" x="95" y="145" width="184" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="tFz-1Z-m9o"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                                <color key="textColor" red="0.11612064391374588" green="0.31469935178756714" blue="0.58876615762710571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your homebase:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdj-JY-v3s">
+                                <rect key="frame" x="105" y="115" width="172" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rCf-3E-dE0" firstAttribute="top" secondItem="blv-h9-VMj" secondAttribute="bottom" constant="-95" id="2a8-6e-EAI"/>
                             <constraint firstItem="rCf-3E-dE0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3dG-Cq-M6W"/>
                             <constraint firstItem="rCf-3E-dE0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7v9-sO-j9b"/>
-                            <constraint firstItem="hyS-d8-yqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="9Zc-t8-39M"/>
-                            <constraint firstItem="blv-h9-VMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="Ej2-5y-Qid"/>
-                            <constraint firstItem="hyS-d8-yqB" firstAttribute="top" secondItem="5f6-SW-2s8" secondAttribute="bottom" constant="29" id="FqC-iz-J6Z"/>
-                            <constraint firstItem="blv-h9-VMj" firstAttribute="centerX" secondItem="VCb-mC-60K" secondAttribute="centerX" id="HKc-ex-G18"/>
-                            <constraint firstItem="5f6-SW-2s8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="MIq-3c-Aiv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rCf-3E-dE0" secondAttribute="trailing" constant="-24" id="agx-9p-yz6"/>
-                            <constraint firstItem="5f6-SW-2s8" firstAttribute="centerX" secondItem="hyS-d8-yqB" secondAttribute="centerX" id="d3G-0X-9bV"/>
-                            <constraint firstItem="VCb-mC-60K" firstAttribute="top" secondItem="blv-h9-VMj" secondAttribute="bottom" constant="25" id="eCg-F7-mPN"/>
-                            <constraint firstItem="5f6-SW-2s8" firstAttribute="top" secondItem="VCb-mC-60K" secondAttribute="bottom" constant="24" id="guo-d6-oiV"/>
-                            <constraint firstItem="blv-h9-VMj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="hQ7-0W-Oid"/>
-                            <constraint firstItem="VCb-mC-60K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j88-6I-lWa"/>
-                            <constraint firstItem="blv-h9-VMj" firstAttribute="centerX" secondItem="hyS-d8-yqB" secondAttribute="centerX" id="oX9-Tl-azL"/>
                             <constraint firstItem="rCf-3E-dE0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vAt-GB-Skh"/>
+                            <constraint firstItem="blv-h9-VMj" firstAttribute="centerX" secondItem="rCf-3E-dE0" secondAttribute="centerX" id="zen-yV-1os"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="customTextField" destination="5f6-SW-2s8" id="LIK-hL-ltJ"/>
                         <outlet property="helloLabel" destination="blv-h9-VMj" id="RB9-8k-jJf"/>
                         <outlet property="hourDistanceLabel" destination="xb8-QG-zPF" id="QAw-UR-jU3"/>
                         <outlet property="hourDistancePicker" destination="6hN-dx-b0b" id="2qD-IK-cCD"/>
@@ -104,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="133"/>
+            <point key="canvasLocation" x="733.60000000000002" y="132.68365817091455"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="abI-3E-WTQ">
@@ -444,7 +428,7 @@
         <image name="transCatalinaTrailPhoto" width="174" height="174"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nOS-dZ-lvn"/>
+        <segue reference="7Us-NL-vhK"/>
         <segue reference="FpK-2Y-BKj"/>
     </inferredMetricsTieBreakers>
 </document>

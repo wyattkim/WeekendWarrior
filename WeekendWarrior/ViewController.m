@@ -10,29 +10,56 @@
 #import "SecondViewController.h"
 #import <GooglePlaces/GooglePlaces.h>
 
-@interface ViewController () <GMSAutocompleteViewControllerDelegate>
+@interface ViewController () <GMSAutocompleteResultsViewControllerDelegate>
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    GMSAutocompleteResultsViewController *_resultsViewController;
+    UISearchController *_searchController;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+     _resultsViewController = [[GMSAutocompleteResultsViewController alloc] init];
+    _resultsViewController.delegate = self;
+    
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:_resultsViewController];
+    _searchController.searchResultsUpdater = _resultsViewController;
+    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 175.0, 250, 32)];
+    [subView addSubview:_searchController.searchBar];
+    [_searchController.searchBar sizeToFit];
+    [self.view addSubview:subView];
+    
+    self.definesPresentationContext = YES;
+    [self becomeFirstResponder];
 
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 258, 152, 32)];
+    [button addTarget:self
+               action:@selector(buttonAction:)
+     forControlEvents:UIControlEventTouchUpInside];
+
+    [button setBackgroundColor:[UIColor blueColor]];
+    [button setTitle:@"Plan My Weekend!" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor whiteColor];
+    [button setTintColor:[UIColor whiteColor]];
+    button.enabled = TRUE;
+    [self.view addSubview:button];
+    
     self.myDatePicker.datePickerMode = UIDatePickerModeDateAndTime;
     self.clickyButton.layer.cornerRadius = 10;
     self.clickyButton.clipsToBounds = true;
+    self.clickyButton.enabled = true;
+}
+    
+- (void)buttonAction:(id)sender {
+    [self performSegueWithIdentifier:@"optionsSegue" sender:sender];
 }
 
-// Present the autocomplete view controller when the button is pressed.
-//- (IBAction)onLaunchClicked:(id)sender {
-//    GMSAutocompleteViewController *acController = [[GMSAutocompleteViewController alloc] init];
-//    acController.delegate = self;
-//    [self presentViewController:acController animated:YES completion:nil];
-//}
-
 // Handle the user's selection.
-- (void)viewController:(GMSAutocompleteViewController *)viewController
+- (void)resultsController:(GMSAutocompleteResultsViewController *)resultsController
 didAutocompleteWithPlace:(GMSPlace *)place {
     [self dismissViewControllerAnimated:YES completion:nil];
     // Do something with the selected place.
@@ -41,7 +68,7 @@ didAutocompleteWithPlace:(GMSPlace *)place {
     self.coordinates = place.coordinate;
 }
 
-- (void)viewController:(GMSAutocompleteViewController *)viewController
+- (void)resultsController:(GMSAutocompleteViewController *)viewController
 didFailAutocompleteWithError:(NSError *)error {
     [self dismissViewControllerAnimated:YES completion:nil];
     // TODO: handle the error.
@@ -54,21 +81,21 @@ didFailAutocompleteWithError:(NSError *)error {
 }
 
 // Turn the network activity indicator on and off again.
-- (void)didRequestAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
+- (void)didRequestAutocompletePredictionsForResultsController:(GMSAutocompleteResultsViewController *)resultsController {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
-- (void)didUpdateAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
+- (void)didUpdateAutocompletePredictionsForResultsController:(GMSAutocompleteResultsViewController *)resultsController {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
-
+    
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"optionsSegue"]){
         SecondViewController *controller = (SecondViewController *)segue.destinationViewController;
         controller.homebaseCoordinate = self.coordinates;
     }
 }
-
+    
 - (IBAction)handleSearchClick:(id)sender {
     self.helloLabel.text = @"Weekend Warrior";
 }
@@ -79,22 +106,23 @@ didFailAutocompleteWithError:(NSError *)error {
     
     
 }
-
+    
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.customTextField resignFirstResponder];
     
-    GMSAutocompleteViewController *acController = [[GMSAutocompleteViewController alloc] init];
-    acController.delegate = self;
-    [self presentViewController:acController animated:YES completion:nil];
+    //    GMSAutocompleteViewController *acController = [[GMSAutocompleteViewController alloc] init];
+    //    acController.delegate = self;
+    //    [self presentViewController:acController animated:YES completion:nil];
 }
-
+    
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
+    
+    
 - (IBAction)hourDistancePickerr:(id)sender {
 }
+    
 @end
 

@@ -21,11 +21,11 @@ import AlgoliaSearch
     
     
     override func viewDidLoad() {
-        print("lat: \(userCoordinate.latitude) lng: \(userCoordinate.longitude)")
-        
-        searchByDistance()
-        
         super.viewDidLoad()
+        
+        if (trails.isEmpty) {
+            searchByDistance()
+        }
         
         trailTable.delegate = self
         trailTable.dataSource = self
@@ -41,7 +41,6 @@ import AlgoliaSearch
         query.hitsPerPage = 10
         index.search(query, completionHandler: { (content, error) -> Void in
             if error == nil {
-                print("Result: \(content!)")
                 guard let hits = content!["hits"] as? [[String: AnyObject]] else { return }
                 var tmp = [Trail]()
                 for hit in hits {
@@ -93,60 +92,9 @@ import AlgoliaSearch
         let testController = storyboard.instantiateViewController(withIdentifier :"TrailDisplayController") as! TrailDisplayController
         testController.trail = selectedTrail
         testController.coordinates = userCoordinate
+        testController.trails = trails
         self.present(testController, animated: true)
     }
-    
-    //    private func calculateDistance(trailCoordinates: CLLocationCoordinate2D) -> Float {
-    //        let trailLocation = CLLocation(latitude: trailCoordinates.latitude, longitude: trailCoordinates.longitude)
-    //        let userLocation = CLLocation(latitude: self.userCoordinate.latitude, longitude: self.userCoordinate.longitude)
-    //
-    //        print("trail: \(trailLocation)")
-    //        print("user loc: \(userLocation)")
-    //
-    //        let distanceInMiles = userLocation.distance(from: trailLocation) * 0.000621371
-    //        return Float(distanceInMiles)
-    //    }
-    
-    //    private func readSampleTrail() {
-    //        for index in 0...50 {
-    //            let queryExpression = AWSDynamoDBQueryExpression()
-    //            queryExpression.keyConditionExpression = "#trailId = :trailId"
-    //
-    //            queryExpression.expressionAttributeNames = [
-    //                "#trailId": "trailId"
-    //            ]
-    //            queryExpression.expressionAttributeValues = [
-    //                ":trailId": "\(index)"
-    //            ]
-    //
-    //            let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
-    //
-    //            dynamoDbObjectMapper.query(Trail.self, expression: queryExpression) { (output: AWSDynamoDBPaginatedOutput?, error: Error?) in
-    //                if error != nil {
-    //                    print("The request failed. Error: \(String(describing: error))")
-    //                }
-    //                if output != nil {
-    //                    for news in output!.items {
-    //                        let newsItem = news as? Trail
-    //                        self.trails += [newsItem!];
-    //
-    //                        let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(newsItem!._longitude!), CLLocationDegrees(newsItem!._latitude!))
-    //                                let distance = self.calculateDistance(trailCoordinates: coordinate)
-    //                                print("name: \(newsItem!._name!)")
-    //                                print("trailId: \(newsItem!._trailId!)")
-    //                                print("distance: \(distance)")
-    //
-    //                                if distance <= 200.0 {
-    //                                    DispatchQueue.main.async {
-    //                                        self.trailTable.reloadData()
-    //                            }
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-    
     
     /*
      // Override to support conditional editing of the table view.

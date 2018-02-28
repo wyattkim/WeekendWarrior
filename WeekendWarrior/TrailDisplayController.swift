@@ -10,6 +10,7 @@ import UIKit
 
 class TrailDisplayController: UIViewController {
     var trail = Trail(json: ["": "" as AnyObject])
+    var trails = [Trail]()
     @IBOutlet weak var trailName: UILabel!
     @IBOutlet weak var trailDescription: UILabel!
     
@@ -38,6 +39,7 @@ class TrailDisplayController: UIViewController {
         
         if let destinationViewController = segue.destination as? TrailTableViewController {
             destinationViewController.userCoordinate = coordinates
+            destinationViewController.trails = trails
         }
     }
     
