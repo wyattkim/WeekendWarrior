@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GooglePlaces/GooglePlaces.h>
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *customTextField;
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *clickyButton;
 @property (weak, nonatomic) IBOutlet UILabel *motto;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinates;
 
 
 @property (weak, nonatomic) IBOutlet UISlider *hourDistancePicker;

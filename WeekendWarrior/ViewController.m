@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 #import <GooglePlaces/GooglePlaces.h>
 
 @interface ViewController () <GMSAutocompleteViewControllerDelegate>
@@ -37,7 +38,7 @@ didAutocompleteWithPlace:(GMSPlace *)place {
     // Do something with the selected place.
     NSLog(@"Place name %@", place.name);
     NSLog(@"Place address %@", place.formattedAddress);
-    NSLog(@"Place attributions %@", place.attributions.string);
+    self.coordinates = place.coordinate;
 }
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController
@@ -59,6 +60,13 @@ didFailAutocompleteWithError:(NSError *)error {
 
 - (void)didUpdateAutocompletePredictions:(GMSAutocompleteViewController *)viewController {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"optionsSegue"]){
+        SecondViewController *controller = (SecondViewController *)segue.destinationViewController;
+        controller.homebaseCoordinate = self.coordinates;
+    }
 }
 
 - (IBAction)handleSearchClick:(id)sender {

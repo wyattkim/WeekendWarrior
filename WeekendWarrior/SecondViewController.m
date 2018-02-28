@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "WeekendWarrior-Swift.h"
 
 @interface SecondViewController ()
 
@@ -16,7 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    coordinates of SF
+//    CLLocationCoordinate2D trail = CLLocationCoordinate2DMake(37.773972, -122.431297);
+//    [self calculateDistance:trail];
+}
+
+- (void)calculateDistance:(CLLocationCoordinate2D)trailCoordinates {
+    CLLocation *trailLocation = [[CLLocation alloc] initWithLatitude:trailCoordinates.latitude longitude:trailCoordinates.longitude];
+    CLLocation *homebaseLocation = [[CLLocation alloc] initWithLatitude:self.homebaseCoordinate.latitude longitude:self.homebaseCoordinate.longitude];
+    
+    CLLocationDistance meters = [homebaseLocation distanceFromLocation:trailLocation];
+    
+    NSLog(@"Distance in miles: %f", meters * 0.000621371);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,17 +40,13 @@
 - (IBAction)distanceSliderChanged:(id)sender {
     self.hourDistanceLabel.text = [NSString stringWithFormat:@"%d hr",
                                    (int) roundf(self.hourDistancePicker.value * 9) + 1];
-
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"trailTableSegue"]){
+        TrailTableViewController *controller = (TrailTableViewController *)segue.destinationViewController;
+        controller.userCoordinate = self.homebaseCoordinate;
+    }
 }
-*/
 
 @end

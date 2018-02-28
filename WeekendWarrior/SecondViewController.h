@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface SecondViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UISlider *hourDistancePicker;
 @property (weak, nonatomic) IBOutlet UILabel *hourDistanceLabel;
+@property (nonatomic, assign) CLLocationCoordinate2D homebaseCoordinate;
 
 @end

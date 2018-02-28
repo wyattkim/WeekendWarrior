@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D50C67C93BBF4B53F10CAF14684C5299"
-               BuildableName = "Pods_WeekendWarrior.framework"
-               BlueprintName = "Pods-WeekendWarrior"
+               BlueprintIdentifier = "E46A1A8953FD354E7293E8870F4B06DB"
+               BuildableName = "AlgoliaSearch.framework"
+               BlueprintName = "AlgoliaSearch-Client-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D50C67C93BBF4B53F10CAF14684C5299"
-            BuildableName = "Pods_WeekendWarrior.framework"
-            BlueprintName = "Pods-WeekendWarrior"
+            BlueprintIdentifier = "E46A1A8953FD354E7293E8870F4B06DB"
+            BuildableName = "AlgoliaSearch.framework"
+            BlueprintName = "AlgoliaSearch-Client-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

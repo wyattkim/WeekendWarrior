@@ -19,10 +19,9 @@
 		DB03583B2008402C00622A08 /* WeekendWarriorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03583A2008402C00622A08 /* WeekendWarriorTests.swift */; };
 		DB0358462008402C00622A08 /* WeekendWarriorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */; };
 		DB12DB3E2032731C00B2421C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DB12DB3D2032731C00B2421C /* awsconfiguration.json */; };
-		DB12DB40203273A600B2421C /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12DB3F203273A600B2421C /* Trail.swift */; };
-		DB12DB4320328A5E00B2421C /* weekend-warrior-data.csv in Resources */ = {isa = PBXBuildFile; fileRef = DB12DB412032881600B2421C /* weekend-warrior-data.csv */; };
 		DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */; };
-		DB1A7EAC202A69A200210E6C /* TrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7EAB202A69A200210E6C /* TrailTableViewController.swift */; };
+		DB6A3599203F6F18007BD0B7 /* TrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */; };
+		DB6A359B20439033007BD0B7 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A359A20439033007BD0B7 /* Trail.swift */; };
 		DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE55B37201FEE3C007337C0 /* ViewController.m */; };
 		E78456322027BBBE00CA4717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78456312027BBBE00CA4717 /* Main.storyboard */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
@@ -71,10 +70,9 @@
 		DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorUITests.swift; sourceTree = "<group>"; };
 		DB0358472008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB12DB3D2032731C00B2421C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
-		DB12DB3F203273A600B2421C /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
-		DB12DB412032881600B2421C /* weekend-warrior-data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "weekend-warrior-data.csv"; sourceTree = "<group>"; };
 		DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTableViewCell.swift; sourceTree = "<group>"; };
-		DB1A7EAB202A69A200210E6C /* TrailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTableViewController.swift; sourceTree = "<group>"; };
+		DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailTableViewController.swift; sourceTree = "<group>"; };
+		DB6A359A20439033007BD0B7 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
 		DBE55B36201FEE3B007337C0 /* WeekendWarrior-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeekendWarrior-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBE55B37201FEE3C007337C0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBE55B39201FEE47007337C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -160,16 +158,15 @@
 		DB0358202008402B00622A08 /* WeekendWarrior */ = {
 			isa = PBXGroup;
 			children = (
-				DB12DB412032881600B2421C /* weekend-warrior-data.csv */,
+				DB6A359A20439033007BD0B7 /* Trail.swift */,
 				DB12DB3D2032731C00B2421C /* awsconfiguration.json */,
-				DB12DB3F203273A600B2421C /* Trail.swift */,
 				E78456312027BBBE00CA4717 /* Main.storyboard */,
 				DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */,
 				DBE55B39201FEE47007337C0 /* ViewController.h */,
 				DBE55B37201FEE3C007337C0 /* ViewController.m */,
 				E78456332027BBDE00CA4717 /* SecondViewController.h */,
 				E78456342027BBDE00CA4717 /* SecondViewController.m */,
-				DB1A7EAB202A69A200210E6C /* TrailTableViewController.swift */,
+				DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */,
 				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
@@ -318,7 +315,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB12DB4320328A5E00B2421C /* weekend-warrior-data.csv in Resources */,
 				DB12DB3E2032731C00B2421C /* awsconfiguration.json in Resources */,
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
@@ -359,6 +355,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/AlgoliaSearch-Client-Swift/AlgoliaSearch.framework",
 				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -372,6 +369,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlgoliaSearch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,13 +520,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB12DB40203273A600B2421C /* Trail.swift in Sources */,
 				DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */,
 				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
 				DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */,
-				DB1A7EAC202A69A200210E6C /* TrailTableViewController.swift in Sources */,
+				DB6A3599203F6F18007BD0B7 /* TrailTableViewController.swift in Sources */,
 				E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */,
 				DB0358282008402B00622A08 /* ModelController.swift in Sources */,
+				DB6A359B20439033007BD0B7 /* Trail.swift in Sources */,
 				DB0358262008402B00622A08 /* DataViewController.swift in Sources */,
 				DB0358222008402B00622A08 /* AppDelegate.swift in Sources */,
 				E7D063FD2034C9BE007CAEEF /* TrailDisplayController.swift in Sources */,

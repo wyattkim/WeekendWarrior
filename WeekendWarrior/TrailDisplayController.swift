@@ -9,12 +9,17 @@
 import UIKit
 
 class TrailDisplayController: UIViewController {
-    var trail = Trail()
+    var trail = Trail(json: ["": "" as AnyObject])
     @IBOutlet weak var trailName: UILabel!
+    @IBOutlet weak var trailDescription: UILabel!
+    
+    public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        trailName.text = trail?._name
+        trailName.text = trail.name
+        trailDescription.text = trail.description
         
         // Do any additional setup after loading the view.
     }
@@ -25,14 +30,16 @@ class TrailDisplayController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let destinationViewController = segue.destination as? TrailTableViewController {
+            destinationViewController.userCoordinate = coordinates
+        }
     }
-    */
+    
 
 }
