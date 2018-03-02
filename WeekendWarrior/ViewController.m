@@ -35,21 +35,21 @@
     self.definesPresentationContext = YES;
     [self becomeFirstResponder];
 
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 258, 152, 32)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 258, 160, 32)];
     [button addTarget:self
                action:@selector(buttonAction:)
      forControlEvents:UIControlEventTouchUpInside];
-
-    [button setBackgroundColor:[UIColor blueColor]];
+    
+    [button setBackgroundColor:[UIColor colorWithRed:252.0f/255.0f
+                                               green:194.0f/255.0f
+                                                blue:189.0f/255.0f
+                                               alpha:1.0f]];
     [button setTitle:@"Plan My Weekend!" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor whiteColor];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTintColor:[UIColor whiteColor]];
     button.enabled = TRUE;
-    [self.view addSubview:button];
-    
-    self.myDatePicker.datePickerMode = UIDatePickerModeDateAndTime;
-    self.clickyButton.layer.cornerRadius = 10;
+    button.layer.cornerRadius = 10;
+    [self.view addSubview:button];Radius = 10;
     self.clickyButton.clipsToBounds = true;
     self.clickyButton.enabled = true;
 }
