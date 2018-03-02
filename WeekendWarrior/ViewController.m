@@ -66,6 +66,7 @@ didAutocompleteWithPlace:(GMSPlace *)place {
     NSLog(@"Place name %@", place.name);
     NSLog(@"Place address %@", place.formattedAddress);
     self.coordinates = place.coordinate;
+    _searchController.searchBar.text = place.name;
 }
 
 - (void)resultsController:(GMSAutocompleteViewController *)viewController
