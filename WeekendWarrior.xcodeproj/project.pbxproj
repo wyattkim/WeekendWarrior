@@ -26,6 +26,8 @@
 		E78456322027BBBE00CA4717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78456312027BBBE00CA4717 /* Main.storyboard */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
 		E7D063FD2034C9BE007CAEEF /* TrailDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */; };
+		E7D398F7204A2A4500100645 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D398F6204A2A4500100645 /* API.swift */; };
+		E7D398FB204A2BAF00100645 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D398FA204A2BAF00100645 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +71,7 @@
 		DB0358412008402C00622A08 /* WeekendWarriorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekendWarriorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorUITests.swift; sourceTree = "<group>"; };
 		DB0358472008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB12DB3D2032731C00B2421C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		DB12DB3D2032731C00B2421C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTableViewCell.swift; sourceTree = "<group>"; };
 		DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailTableViewController.swift; sourceTree = "<group>"; };
 		DB6A359A20439033007BD0B7 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		E78456332027BBDE00CA4717 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDisplayController.swift; sourceTree = "<group>"; };
+		E7D398F6204A2A4500100645 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E7D398FA204A2BAF00100645 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = /Users/alana/WeekendWarrior/WeekendWarrior/DataManager.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,9 @@
 		DB0358202008402B00622A08 /* WeekendWarrior */ = {
 			isa = PBXGroup;
 			children = (
+				E7D398FA204A2BAF00100645 /* DataManager.swift */,
+				E7D398F6204A2A4500100645 /* API.swift */,
+				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
 				DB6A359A20439033007BD0B7 /* Trail.swift */,
 				DB12DB3D2032731C00B2421C /* awsconfiguration.json */,
 				E78456312027BBBE00CA4717 /* Main.storyboard */,
@@ -167,7 +174,6 @@
 				E78456332027BBDE00CA4717 /* SecondViewController.h */,
 				E78456342027BBDE00CA4717 /* SecondViewController.m */,
 				DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */,
-				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
 				DB0358252008402B00622A08 /* DataViewController.swift */,
@@ -520,6 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D398F7204A2A4500100645 /* API.swift in Sources */,
+				E7D398FB204A2BAF00100645 /* DataManager.swift in Sources */,
 				DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */,
 				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
 				DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */,

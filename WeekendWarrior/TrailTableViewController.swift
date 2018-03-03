@@ -78,7 +78,13 @@ import AlgoliaSearch
         
         // Fetches the appropriate trail for the data source layout.
         let trail = trails[indexPath.row]
-        
+        if(indexPath.row%2 == 0){
+            cell.backgroundColor = UIColor(red: 146.0/255, green: 215.0/255, blue: 234.0/255, alpha: 0.6)
+        }
+        else{
+            cell.backgroundColor = UIColor(red: 146.0/255, green: 215.0/255, blue: 234.0/255, alpha: 0.3)
+            
+        }
         cell.nameLabel.text = trail.name
         cell.statusLabel.text = trail.status
         cell.difficultyLabel.text = "Temp Difficulty"

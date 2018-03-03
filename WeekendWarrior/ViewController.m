@@ -35,7 +35,7 @@
     self.definesPresentationContext = YES;
     [self becomeFirstResponder];
 
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 258, 160, 32)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(130, 258, 170, 32)];
     [button addTarget:self
                action:@selector(buttonAction:)
      forControlEvents:UIControlEventTouchUpInside];
@@ -49,7 +49,7 @@
     [button setTintColor:[UIColor whiteColor]];
     button.enabled = TRUE;
     button.layer.cornerRadius = 10;
-    [self.view addSubview:button];Radius = 10;
+    [self.view addSubview:button];
     self.clickyButton.clipsToBounds = true;
     self.clickyButton.enabled = true;
 }
