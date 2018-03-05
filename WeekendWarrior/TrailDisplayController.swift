@@ -29,7 +29,7 @@ class TrailDisplayController: UIViewController {
         super.viewDidLoad()
         
         dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
-            print(response)
+            
         }
         
         trailName.text = trail.name

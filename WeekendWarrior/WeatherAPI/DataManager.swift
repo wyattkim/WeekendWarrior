@@ -58,6 +58,17 @@ final class DataManager {
     
     private func processWeatherData(data: Data, completion: WeatherDataCompletion) {
         if let JSON = try? JSONSerialization.jsonObject(with: data, options: []) as AnyObject {
+            do {
+                let parsedData = try JSONSerialization.jsonObject(with: data) as! [String:Any]
+                let currentConditions = parsedData["currently"] as! [String:Any]
+                
+                print(currentConditions)
+                
+                let currentTemperatureF = currentConditions["temperature"] as! Double
+                print(currentTemperatureF)
+            } catch let error as NSError {
+                print(error)
+            }
             completion(JSON, nil)
         } else {
             completion(nil, .InvalidResponse)

@@ -23,6 +23,9 @@
 		DB6A3599203F6F18007BD0B7 /* TrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */; };
 		DB6A359B20439033007BD0B7 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A359A20439033007BD0B7 /* Trail.swift */; };
 		DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE55B37201FEE3C007337C0 /* ViewController.m */; };
+		E713C0AB204B87E7007CEC5F /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */; };
+		E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AC204B8825007CEC5F /* WeatherData.swift */; };
+		E713C0AF204B8843007CEC5F /* WeatherHourData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AE204B8843007CEC5F /* WeatherHourData.swift */; };
 		E78456322027BBBE00CA4717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78456312027BBBE00CA4717 /* Main.storyboard */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
 		E7D063FD2034C9BE007CAEEF /* TrailDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */; };
@@ -78,12 +81,15 @@
 		DBE55B36201FEE3B007337C0 /* WeekendWarrior-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeekendWarrior-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBE55B37201FEE3C007337C0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBE55B39201FEE47007337C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		E713C0AC204B8825007CEC5F /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		E713C0AE204B8843007CEC5F /* WeatherHourData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHourData.swift; sourceTree = "<group>"; };
 		E78456312027BBBE00CA4717 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E78456332027BBDE00CA4717 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDisplayController.swift; sourceTree = "<group>"; };
 		E7D398F6204A2A4500100645 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		E7D398FA204A2BAF00100645 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = /Users/alana/WeekendWarrior/WeekendWarrior/DataManager.swift; sourceTree = "<absolute>"; };
+		E7D398FA204A2BAF00100645 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = /Users/alana/WeekendWarrior/WeekendWarrior/WeatherAPI/DataManager.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +168,7 @@
 		DB0358202008402B00622A08 /* WeekendWarrior */ = {
 			isa = PBXGroup;
 			children = (
-				E7D398FA204A2BAF00100645 /* DataManager.swift */,
-				E7D398F6204A2A4500100645 /* API.swift */,
+				E713C0A9204B87AE007CEC5F /* WeatherAPI */,
 				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
 				DB6A359A20439033007BD0B7 /* Trail.swift */,
 				DB12DB3D2032731C00B2421C /* awsconfiguration.json */,
@@ -202,6 +207,18 @@
 				DB0358472008402C00622A08 /* Info.plist */,
 			);
 			path = WeekendWarriorUITests;
+			sourceTree = "<group>";
+		};
+		E713C0A9204B87AE007CEC5F /* WeatherAPI */ = {
+			isa = PBXGroup;
+			children = (
+				E7D398FA204A2BAF00100645 /* DataManager.swift */,
+				E7D398F6204A2A4500100645 /* API.swift */,
+				E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */,
+				E713C0AC204B8825007CEC5F /* WeatherData.swift */,
+				E713C0AE204B8843007CEC5F /* WeatherHourData.swift */,
+			);
+			path = WeatherAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,14 +545,17 @@
 			files = (
 				E7D398F7204A2A4500100645 /* API.swift in Sources */,
 				E7D398FB204A2BAF00100645 /* DataManager.swift in Sources */,
+				E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */,
 				DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */,
 				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
 				DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */,
 				DB6A3599203F6F18007BD0B7 /* TrailTableViewController.swift in Sources */,
 				E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */,
+				E713C0AB204B87E7007CEC5F /* JSONDecodable.swift in Sources */,
 				DB0358282008402B00622A08 /* ModelController.swift in Sources */,
 				DB6A359B20439033007BD0B7 /* Trail.swift in Sources */,
 				DB0358262008402B00622A08 /* DataViewController.swift in Sources */,
+				E713C0AF204B8843007CEC5F /* WeatherHourData.swift in Sources */,
 				DB0358222008402B00622A08 /* AppDelegate.swift in Sources */,
 				E7D063FD2034C9BE007CAEEF /* TrailDisplayController.swift in Sources */,
 			);
