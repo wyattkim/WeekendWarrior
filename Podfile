@@ -12,7 +12,7 @@ target 'WeekendWarrior' do
     pod 'Firebase', '~> 4.1.1'
     pod 'Firebase/Core'
     pod 'FirebaseAnalytics', '~> 4.0.3'
-
+    pod 'AFNetworking', '~> 3.0'
 
   # Pods for WeekendWarrior
 
