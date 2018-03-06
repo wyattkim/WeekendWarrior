@@ -14,6 +14,8 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var trailName: UILabel!
     @IBOutlet weak var trailDescription: UILabel!
     @IBOutlet weak var trailPhoto: UIImageView!
+    @IBOutlet weak var statusButton: UIButton!
+    
     
     struct Defaults {
         
@@ -35,6 +37,7 @@ class TrailDisplayController: UIViewController {
         
         trailName.text = trail.name
         trailDescription.text = trail.description
+        statusButton.setTitle(trail.status, for: .normal)
         var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"
         urlString += trail.id!
         urlString += "_0.jpg"
