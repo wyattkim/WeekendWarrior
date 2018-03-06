@@ -89,7 +89,7 @@
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDisplayController.swift; sourceTree = "<group>"; };
 		E7D398F6204A2A4500100645 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		E7D398FA204A2BAF00100645 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = /Users/wyattkim/WeekendWarrior/WeekendWarrior/WeatherAPI/DataManager.swift; sourceTree = "<absolute>"; };
+		E7D398FA204A2BAF00100645 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = /Users/alana/WeekendWarrior/WeekendWarrior/WeatherAPI/DataManager.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
