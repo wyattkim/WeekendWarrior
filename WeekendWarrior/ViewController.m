@@ -30,6 +30,7 @@
     UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 175.0, 250, 32)];
     [subView addSubview:_searchController.searchBar];
     [_searchController.searchBar sizeToFit];
+    _searchController.searchBar.text = @"Current Location";
     [self.view addSubview:subView];
     
     self.definesPresentationContext = YES;
@@ -88,6 +89,9 @@ didFailAutocompleteWithError:(NSError *)error {
 
 - (void)didUpdateAutocompletePredictionsForResultsController:(GMSAutocompleteResultsViewController *)resultsController {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    if ([_searchController.searchBar.text  isEqual: @"Current Location"]) {
+        _searchController.searchBar.text = @"";
+    }
 }
     
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

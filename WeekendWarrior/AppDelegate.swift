@@ -7,10 +7,6 @@
 //
 
 import UIKit
-import AWSMobileClient
-import AWSCore
-import AWSPinpoint
-import AWSDynamoDB
 import GoogleMaps
 import GooglePlaces
 
@@ -18,25 +14,17 @@ import GooglePlaces
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var pinpoint: AWSPinpoint?
 
     func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {
-        
-        return AWSMobileClient.sharedInstance().interceptApplication(
-            application, open: url,
-            sourceApplication: sourceApplication,
-            annotation: annotation)
-        
+        return true;
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
-//        AWSDDLog.sharedInstance.logLevel = .info
-//        pinpoint = AWSPinpoint(configuration: AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
+
         GMSPlacesClient.provideAPIKey("AIzaSyBF0jWWbPyIPDDB9GNkmnRaAacvMBXIw10")
-        return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
+        return true;
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

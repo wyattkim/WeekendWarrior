@@ -18,18 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    coordinates of SF
-//    CLLocationCoordinate2D trail = CLLocationCoordinate2DMake(37.773972, -122.431297);
-//    [self calculateDistance:trail];
-}
-
-- (void)calculateDistance:(CLLocationCoordinate2D)trailCoordinates {
-    CLLocation *trailLocation = [[CLLocation alloc] initWithLatitude:trailCoordinates.latitude longitude:trailCoordinates.longitude];
-    CLLocation *homebaseLocation = [[CLLocation alloc] initWithLatitude:self.homebaseCoordinate.latitude longitude:self.homebaseCoordinate.longitude];
-    
-    CLLocationDistance meters = [homebaseLocation distanceFromLocation:trailLocation];
-    
-    NSLog(@"Distance in miles: %f", meters * 0.000621371);
 }
 
 - (void)didReceiveMemoryWarning {

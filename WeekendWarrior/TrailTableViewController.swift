@@ -5,9 +5,6 @@
 //  Created by Wyatt Kim on 2/6/18.
 //
 import UIKit
-import AWSAuthUI
-import AWSAuthCore
-import AWSDynamoDB
 import CSV
 import CoreLocation
 import AlgoliaSearch
@@ -32,13 +29,21 @@ import AlgoliaSearch
     }
     
     func searchByDistance() {
-        let index = client.index(withName: "test_trails")
-        let settings = ["searchableAttributes": ["name", "status"], "ranking": ["geo", "words"]]
+        let index = client.index(withName: "alpha_trails")
+        let settings = ["attributesForFaceting": ["status"], "ranking": ["geo", "filters"]]
         index.setSettings(settings)
         let query = Query(query: "")
-        query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
+        if userCoordinate.latitude == 0.000000 && userCoordinate.longitude == 0.000000 {
+            query.aroundLatLngViaIP = true;
+        } else {
+            query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
+        }
         query.attributesToRetrieve = ["name", "status", "description"]
-        query.hitsPerPage = 10
+        query.hitsPerPage = 15
+        query.facets = ["*"]
+        query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\")"
+        query.getRankingInfo = true
+
         index.search(query, completionHandler: { (content, error) -> Void in
             if error == nil {
                 guard let hits = content!["hits"] as? [[String: AnyObject]] else { return }
