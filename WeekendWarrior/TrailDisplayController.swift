@@ -14,10 +14,9 @@ class TrailDisplayController: UIViewController {
     var currWeather: String = ""
     @IBOutlet weak var trailName: UILabel!
     @IBOutlet weak var trailDescription: UILabel!
-    @IBOutlet weak var weatherSummary: UILabel!
     @IBOutlet weak var trailPhoto: UIImageView!
     @IBOutlet weak var statusButton: UIButton!
-    
+    @IBOutlet weak var weatherSummary: UILabel!
     
     struct Defaults {
         
@@ -32,17 +31,21 @@ class TrailDisplayController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(trail.lat)
+        print(trail.lng)
         dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
-            var weather = "";
-            if let weather = response{
-                DispatchQueue.main.async {
-                self.weatherSummary.text = weather as! String
+            if response != nil {
+                var weather = "";
+                if let weather = response {
+                    DispatchQueue.main.async {
+                        self.weatherSummary.text = weather as! String
+                    }
                 }
             }
         }
         trailName.text = trail.name
         trailDescription.text = trail.description
+        trailDescription.sizeToFit()
         statusButton.setTitle(trail.status, for: .normal)
         var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"
         urlString += trail.id!

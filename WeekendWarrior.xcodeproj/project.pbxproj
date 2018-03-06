@@ -26,8 +26,8 @@
 		E713C0AB204B87E7007CEC5F /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */; };
 		E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AC204B8825007CEC5F /* WeatherData.swift */; };
 		E713C0AF204B8843007CEC5F /* WeatherHourData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AE204B8843007CEC5F /* WeatherHourData.swift */; };
-		E78456322027BBBE00CA4717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78456312027BBBE00CA4717 /* Main.storyboard */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
+		E7AFA6F6204F08EF00C66697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AFA6F5204F08EE00C66697 /* Main.storyboard */; };
 		E7D063FD2034C9BE007CAEEF /* TrailDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */; };
 		E7D398F7204A2A4500100645 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D398F6204A2A4500100645 /* API.swift */; };
 		E7D398FB204A2BAF00100645 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D398FA204A2BAF00100645 /* DataManager.swift */; };
@@ -84,9 +84,9 @@
 		E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		E713C0AC204B8825007CEC5F /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		E713C0AE204B8843007CEC5F /* WeatherHourData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHourData.swift; sourceTree = "<group>"; };
-		E78456312027BBBE00CA4717 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E78456332027BBDE00CA4717 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E7AFA6F5204F08EE00C66697 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../Desktop/Main.storyboard; sourceTree = "<group>"; };
 		E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDisplayController.swift; sourceTree = "<group>"; };
 		E7D398F6204A2A4500100645 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E7D398FA204A2BAF00100645 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = /Users/alana/WeekendWarrior/WeekendWarrior/WeatherAPI/DataManager.swift; sourceTree = "<absolute>"; };
@@ -171,7 +171,7 @@
 				E713C0A9204B87AE007CEC5F /* WeatherAPI */,
 				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
 				DB6A359A20439033007BD0B7 /* Trail.swift */,
-				E78456312027BBBE00CA4717 /* Main.storyboard */,
+				E7AFA6F5204F08EE00C66697 /* Main.storyboard */,
 				DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */,
 				DBE55B39201FEE47007337C0 /* ViewController.h */,
 				DBE55B37201FEE3C007337C0 /* ViewController.m */,
@@ -341,7 +341,7 @@
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
 				DB9FDC97204E532300C3A663 /* GoogleService-Info.plist in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
-				E78456322027BBBE00CA4717 /* Main.storyboard in Resources */,
+				E7AFA6F6204F08EF00C66697 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
