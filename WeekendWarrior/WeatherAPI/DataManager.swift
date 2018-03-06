@@ -61,15 +61,12 @@ final class DataManager {
             do {
                 let parsedData = try JSONSerialization.jsonObject(with: data) as! [String:Any]
                 let currentConditions = parsedData["currently"] as! [String:Any]
-                
-                print(currentConditions)
-                
-                let currentTemperatureF = currentConditions["temperature"] as! Double
-                print(currentTemperatureF)
+                //let currentTemperatureF = currentConditions["temperature"] as! Double
+                let summary = currentConditions["summary"] as AnyObject
+                completion(summary, nil)
             } catch let error as NSError {
                 print(error)
             }
-            completion(JSON, nil)
         } else {
             completion(nil, .InvalidResponse)
         }

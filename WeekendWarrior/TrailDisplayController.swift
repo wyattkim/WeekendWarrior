@@ -11,8 +11,10 @@ import UIKit
 class TrailDisplayController: UIViewController {
     var trail = Trail(json: ["": "" as AnyObject])
     var trails = [Trail]()
+    var currWeather: String = ""
     @IBOutlet weak var trailName: UILabel!
     @IBOutlet weak var trailDescription: UILabel!
+    @IBOutlet weak var weatherSummary: UILabel!
     
     struct Defaults {
         
@@ -29,9 +31,13 @@ class TrailDisplayController: UIViewController {
         super.viewDidLoad()
         
         dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
-            
+            var weather = "";
+            if let weather = response{
+                DispatchQueue.main.async {
+                self.weatherSummary.text = weather as! String
+                }
+            }
         }
-        
         trailName.text = trail.name
         trailDescription.text = trail.description
         }
