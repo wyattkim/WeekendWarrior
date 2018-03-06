@@ -21,6 +21,7 @@
 		DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */; };
 		DB6A3599203F6F18007BD0B7 /* TrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */; };
 		DB6A359B20439033007BD0B7 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A359A20439033007BD0B7 /* Trail.swift */; };
+		DB9FDC97204E532300C3A663 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB9FDC96204E532300C3A663 /* GoogleService-Info.plist */; };
 		DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE55B37201FEE3C007337C0 /* ViewController.m */; };
 		E713C0AB204B87E7007CEC5F /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */; };
 		E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AC204B8825007CEC5F /* WeatherData.swift */; };
@@ -76,6 +77,7 @@
 		DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTableViewCell.swift; sourceTree = "<group>"; };
 		DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailTableViewController.swift; sourceTree = "<group>"; };
 		DB6A359A20439033007BD0B7 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
+		DB9FDC96204E532300C3A663 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DBE55B36201FEE3B007337C0 /* WeekendWarrior-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeekendWarrior-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBE55B37201FEE3C007337C0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBE55B39201FEE47007337C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		E713C0A9204B87AE007CEC5F /* WeatherAPI */ = {
 			isa = PBXGroup;
 			children = (
+				DB9FDC96204E532300C3A663 /* GoogleService-Info.plist */,
 				E7D398FA204A2BAF00100645 /* DataManager.swift */,
 				E7D398F6204A2A4500100645 /* API.swift */,
 				E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
+				DB9FDC97204E532300C3A663 /* GoogleService-Info.plist in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
 				E78456322027BBBE00CA4717 /* Main.storyboard in Resources */,
 			);
@@ -367,11 +371,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-WeekendWarrior/Pods-WeekendWarrior-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AlgoliaSearch-Client-Swift/AlgoliaSearch.framework",
 				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlgoliaSearch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

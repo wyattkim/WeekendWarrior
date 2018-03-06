@@ -9,6 +9,10 @@ target 'WeekendWarrior' do
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
     pod 'AlgoliaSearch-Client-Swift', '~> 4.0'
+    pod 'Firebase', '~> 4.1.1'
+    pod 'Firebase/Core'
+    pod 'FirebaseAnalytics', '~> 4.0.3'
+
 
   # Pods for WeekendWarrior
 
