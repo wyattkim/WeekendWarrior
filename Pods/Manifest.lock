@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
   - AlgoliaSearch-Client-Swift (4.8.2)
   - CSV.swift (2.1.0)
   - Firebase (4.1.1):
@@ -36,6 +51,7 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
   - AlgoliaSearch-Client-Swift (~> 4.0)
   - CSV.swift (~> 2.1.0)
   - Firebase (~> 4.1.1)
@@ -46,6 +62,7 @@ DEPENDENCIES:
   - GooglePlaces
 
 SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   AlgoliaSearch-Client-Swift: 78f46378329dc47db5b7be8385f49c7be0ad3348
   CSV.swift: a24fb11c17875523783fe963592762ff163ef8ea
   Firebase: 052c0de688fc87b414996eea13e223dd9fee3fa2
@@ -58,6 +75,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 4ca67b607a1357f8911b7347bfd780edb8067285
+PODFILE CHECKSUM: 0b74eea98929da0425d2d44bd73c006782548dc1
 
 COCOAPODS: 1.4.0
