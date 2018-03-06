@@ -8,6 +8,8 @@ import UIKit
 import CSV
 import CoreLocation
 import AlgoliaSearch
+import AFNetworking
+
 
 @objc class TrailTableViewController: UITableViewController {
     //MARK: Properties
@@ -38,7 +40,7 @@ import AlgoliaSearch
         } else {
             query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
         }
-        query.attributesToRetrieve = ["name", "status", "description"]
+        query.attributesToRetrieve = ["name", "status", "description", "objectID"]
         query.hitsPerPage = 15
         query.facets = ["*"]
         query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\")"
@@ -47,6 +49,7 @@ import AlgoliaSearch
         index.search(query, completionHandler: { (content, error) -> Void in
             if error == nil {
                 guard let hits = content!["hits"] as? [[String: AnyObject]] else { return }
+                print(hits)
                 var tmp = [Trail]()
                 for hit in hits {
                     tmp.append(Trail(json: hit))
@@ -92,8 +95,12 @@ import AlgoliaSearch
         }
         cell.nameLabel.text = trail.name
         cell.statusLabel.text = trail.status
-        cell.difficultyLabel.text = "Temp Difficulty"
-        cell.distanceLabel.text = "Temp Distance"
+        var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"
+        urlString += trail.id!
+        urlString += "_0.jpg"
+        cell.photoImageView.setImageWith(NSURL(string: urlString)! as URL)
+        cell.difficultyLabel.text = "Difficulty: "
+        cell.distanceLabel.text = "Distance: "
         return cell
     }
     

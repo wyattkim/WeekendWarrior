@@ -373,7 +373,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transCatalinaTrailPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-G9-ral">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-G9-ral">
                                 <rect key="frame" x="34" y="120" width="178" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="c2e-03-1JE"/>
@@ -518,9 +518,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="ehv-NZ-F4I"/>
                     <connections>
+                        <outlet property="statusButton" destination="QzK-WF-NHB" id="87d-bY-hLM"/>
                         <outlet property="trailDescription" destination="kwl-tw-tEc" id="JX3-Ra-0ux"/>
                         <outlet property="trailName" destination="6Lb-2G-E7f" id="Ttv-HU-WpP"/>
+<<<<<<< HEAD
                         <outlet property="weatherSummary" destination="p5O-os-Kq9" id="3ys-e8-aSD"/>
+=======
+                        <outlet property="trailPhoto" destination="zTG-G9-ral" id="yLX-lY-PoL"/>
+>>>>>>> 0bbad43a68ccb37e8203f9e54abaf0244efa332f
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EN-Aj-Wxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -531,7 +536,6 @@
     <resources>
         <image name="Image" width="1040" height="1362"/>
         <image name="defaultPhoto" width="540" height="540"/>
-        <image name="transCatalinaTrailPhoto" width="174" height="174"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nOS-dZ-lvn"/>
