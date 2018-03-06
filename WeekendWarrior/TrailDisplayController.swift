@@ -31,14 +31,12 @@ class TrailDisplayController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(trail.lat)
-        print(trail.lng)
-        dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
+
+        dataManager.weatherDataForLocation(latitude: trail.lat!, longitude: trail.lng!) { (response, error) in
             if response != nil {
-                var weather = "";
                 if let weather = response {
                     DispatchQueue.main.async {
-                        self.weatherSummary.text = weather as! String
+                        self.weatherSummary.text = weather as? String
                     }
                 }
             }

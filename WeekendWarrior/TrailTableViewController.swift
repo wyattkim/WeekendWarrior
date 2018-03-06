@@ -40,7 +40,7 @@ import AFNetworking
         } else {
             query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
         }
-        query.attributesToRetrieve = ["name", "status", "description", "objectID"]
+        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc"]
         query.hitsPerPage = 15
         query.facets = ["*"]
         query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\")"

@@ -521,11 +521,8 @@
                         <outlet property="statusButton" destination="QzK-WF-NHB" id="87d-bY-hLM"/>
                         <outlet property="trailDescription" destination="kwl-tw-tEc" id="JX3-Ra-0ux"/>
                         <outlet property="trailName" destination="6Lb-2G-E7f" id="Ttv-HU-WpP"/>
-<<<<<<< HEAD
-                        <outlet property="weatherSummary" destination="p5O-os-Kq9" id="3ys-e8-aSD"/>
-=======
                         <outlet property="trailPhoto" destination="zTG-G9-ral" id="yLX-lY-PoL"/>
->>>>>>> 0bbad43a68ccb37e8203f9e54abaf0244efa332f
+                        <outlet property="weatherSummary" destination="p5O-os-Kq9" id="3ys-e8-aSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EN-Aj-Wxn" userLabel="First Responder" sceneMemberID="firstResponder"/>

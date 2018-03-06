@@ -13,14 +13,14 @@ struct Trail {
     var description: String? {return json["description"] as? String}
     var id: String? {return json["objectID"] as? String}
     
-    //var _geoloc: String? {return json["_geoloc"] as? String}
-    
     var lat: Double? {
-        // let geoloc = json["_geoloc"] as? [String:Any]
-        // return geoloc!["lat"] as! Double
-        return json["lat"] as? Double
+        let geoloc = json["_geoloc"] as? [String:Any]
+        return (geoloc!["lat"] as! Double)
     }
-    var lng: Double? {return json["lng"] as? Double}
     
+    var lng: Double? {
+        let geoloc = json["_geoloc"] as? [String:Any]
+        return (geoloc!["lng"] as! Double)
+    }
 
 }
