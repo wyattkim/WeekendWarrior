@@ -99,8 +99,7 @@ import AFNetworking
         urlString += trail.id!
         urlString += "_0.jpg"
         cell.photoImageView.setImageWith(NSURL(string: urlString)! as URL)
-        cell.difficultyLabel.text = "Difficulty: "
-        cell.distanceLabel.text = "Distance: "
+        cell.distanceLabel.text = "Difficulty: Medium"
         return cell
     }
     
