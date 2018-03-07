@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class TrailDisplayController: UIViewController {
     var trail = Trail(json: ["": "" as AnyObject])
@@ -17,6 +18,7 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var trailPhoto: UIImageView!
     @IBOutlet weak var statusButton: UIButton!
     @IBOutlet weak var weatherSummary: UILabel!
+    @IBOutlet weak var directionsButton: UIButton!
     
     struct Defaults {
         
@@ -70,5 +72,20 @@ class TrailDisplayController: UIViewController {
         }
     }
     
+    @IBAction func directionsClicked(_ sender: UIButton) {
+        tapMapfunc()
+    }
+    
+    func tapMapfunc() {
+        let latitude:CLLocationDegrees = (trail.lat)!
+        let longitude:CLLocationDegrees = (trail.lng)!
+        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        let placemark : MKPlacemark = MKPlacemark(coordinate: coordinate, addressDictionary:nil)
+        let mapItem:MKMapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Target location"
+        let launchOptions:NSDictionary = NSDictionary(object: MKLaunchOptionsDirectionsModeDriving, forKey: MKLaunchOptionsDirectionsModeKey as NSCopying)
+        let currentLocationMapItem:MKMapItem = MKMapItem.forCurrentLocation()
+        MKMapItem.openMaps(with: [currentLocationMapItem, mapItem], launchOptions: launchOptions as? [String : Any])
+        }
     
 }
