@@ -36,7 +36,7 @@ class TrailDisplayController: UIViewController {
             if response != nil {
                 if let weather = response {
                     DispatchQueue.main.async {
-                        self.weatherSummary.text = weather as? String
+                        self.weatherSummary.text = String(describing: weather) + "°F"
                     }
                 }
             }
@@ -70,5 +70,5 @@ class TrailDisplayController: UIViewController {
         }
     }
     
-
+    
 }

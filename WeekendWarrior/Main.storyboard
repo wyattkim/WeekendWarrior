@@ -543,7 +543,7 @@
                         <outlet property="trailDescription" destination="kwl-tw-tEc" id="JX3-Ra-0ux"/>
                         <outlet property="trailName" destination="6Lb-2G-E7f" id="Ttv-HU-WpP"/>
                         <outlet property="trailPhoto" destination="zTG-G9-ral" id="yLX-lY-PoL"/>
-                        <outlet property="weatherSummary" destination="p5O-os-Kq9" id="3ys-e8-aSD"/>
+                        <outlet property="weatherSummary" destination="p5O-os-Kq9" id="6Xn-9s-sie"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EN-Aj-Wxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -556,7 +556,6 @@
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nSX-Xk-k9f"/>
         <segue reference="nOS-dZ-lvn"/>
         <segue reference="ULl-yV-VKY"/>
     </inferredMetricsTieBreakers>
