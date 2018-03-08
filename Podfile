@@ -13,6 +13,8 @@ target 'WeekendWarrior' do
     pod 'Firebase/Core'
     pod 'FirebaseAnalytics', '~> 4.0.3'
     pod 'AFNetworking', '~> 3.0'
+    pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
+    pod 'Flurry-iOS-SDK/FlurryAds' #Advertising Pod (requires Analytics)
 
   # Pods for WeekendWarrior
 

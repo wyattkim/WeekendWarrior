@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52851F9A74F38D598506F456EFF77CBC"
+               BlueprintIdentifier = "0DF17FB2758EB8835994C179FC910249"
                BuildableName = "Pods_WeekendWarrior.framework"
                BlueprintName = "Pods-WeekendWarrior"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52851F9A74F38D598506F456EFF77CBC"
+            BlueprintIdentifier = "0DF17FB2758EB8835994C179FC910249"
             BuildableName = "Pods_WeekendWarrior.framework"
             BlueprintName = "Pods-WeekendWarrior"
             ReferencedContainer = "container:Pods.xcodeproj">
