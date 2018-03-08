@@ -9,6 +9,7 @@ import CSV
 import CoreLocation
 import AlgoliaSearch
 import AFNetworking
+import FirebaseAnalytics
 
 
 @objc class TrailTableViewController: UITableViewController {
@@ -49,7 +50,9 @@ import AFNetworking
         index.search(query, completionHandler: { (content, error) -> Void in
             if error == nil {
                 guard let hits = content!["hits"] as? [[String: AnyObject]] else { return }
-                print(hits)
+                Analytics.logEvent(AnalyticsEventSearch, parameters: [
+                    AnalyticsParameterSearchTerm: "lat: \(String(self.userCoordinate.latitude)), lng: \(String(self.userCoordinate.longitude))"
+                    ])
                 var tmp = [Trail]()
                 for hit in hits {
                     tmp.append(Trail(json: hit))
