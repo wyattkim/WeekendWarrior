@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Flurry.startSession("749C2C3ZRPN2RP8YYCBH", with: FlurrySessionBuilder
             .init()
             .withCrashReporting(true)
-            .withLogLevel(FlurryLogLevelAll))
+            .withLogLevel(FlurryLogLevelCriticalOnly))
 
         GMSPlacesClient.provideAPIKey("AIzaSyBF0jWWbPyIPDDB9GNkmnRaAacvMBXIw10")
         return true;

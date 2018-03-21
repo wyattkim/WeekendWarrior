@@ -43,5 +43,7 @@
 	</array>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
+	<key>CFBundleIconName</key>
+	<string>Assets.xcassets/icon.png</string>
 </dict>
 </plist>
