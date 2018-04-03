@@ -89,19 +89,30 @@ import FirebaseAnalytics
         
         // Fetches the appropriate trail for the data source layout.
         let trail = trails[indexPath.row]
-        if(indexPath.row%2 == 0){
+        /*if(indexPath.row%2 == 0){
             cell.backgroundColor = UIColor(red: 146.0/255, green: 215.0/255, blue: 234.0/255, alpha: 0.6)
         }
         else{
             cell.backgroundColor = UIColor(red: 146.0/255, green: 215.0/255, blue: 234.0/255, alpha: 0.3)
-            
-        }
+        } */
         cell.nameLabel.text = trail.name
         cell.statusLabel.text = trail.status
+        if (trail.status == "None"){
+            cell.statusLabel.textColor = UIColor.black
+            cell.statusLabel.text = "Unknown"
+        } else if (trail.status == "Closed") {
+            cell.statusLabel.textColor = UIColor.red
+        }
         var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"
         urlString += trail.id!
         urlString += "_0.jpg"
         cell.photoImageView.setImageWith(NSURL(string: urlString)! as URL)
+        cell.photoImageView.translatesAutoresizingMaskIntoConstraints = false
+        cell.photoImageView.layer.cornerRadius = 5
+        cell.photoImageView.layer.borderWidth = 8
+        cell.photoImageView.layer.borderColor = UIColor.white.cgColor
+        cell.photoImageView.backgroundColor = UIColor.white
+        cell.photoImageView.layer.masksToBounds = true
         cell.distanceLabel.text = "Difficulty: Medium"
         return cell
     }
