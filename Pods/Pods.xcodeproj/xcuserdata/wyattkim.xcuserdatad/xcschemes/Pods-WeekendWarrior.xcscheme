@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0DF17FB2758EB8835994C179FC910249"
+               BlueprintIdentifier = "57FAB8C38A9DE4F0DDA39B3690FCAC1D"
                BuildableName = "Pods_WeekendWarrior.framework"
                BlueprintName = "Pods-WeekendWarrior"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0DF17FB2758EB8835994C179FC910249"
+            BlueprintIdentifier = "57FAB8C38A9DE4F0DDA39B3690FCAC1D"
             BuildableName = "Pods_WeekendWarrior.framework"
             BlueprintName = "Pods-WeekendWarrior"
             ReferencedContainer = "container:Pods.xcodeproj">
