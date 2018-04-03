@@ -1,33 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skk-8h-L1E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skk-8h-L1E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AmericanTypewriter.ttc">
-            <string>AmericanTypewriter</string>
-            <string>AmericanTypewriter-Bold</string>
-            <string>AmericanTypewriter-Semibold</string>
-        </array>
-        <array key="Arial.ttf">
-            <string>ArialMT</string>
-        </array>
-        <array key="ArialBold.ttf">
-            <string>Arial-BoldMT</string>
-        </array>
-        <array key="ArialHB.ttc">
-            <string>ArialHebrew</string>
-            <string>ArialHebrew-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -212,7 +195,7 @@
             <objects>
                 <tableViewController title="Results" id="skk-8h-L1E" customClass="TrailTableViewController" customModule="WeekendWarrior" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="meV-q4-m7e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="iBX-Fj-JoE">
@@ -237,25 +220,25 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pp-mN-78g">
-                                            <rect key="frame" x="99" y="69" width="203" height="37"/>
+                                            <rect key="frame" x="99" y="69.5" width="203" height="36"/>
                                             <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opp-Sx-Iai">
-                                            <rect key="frame" x="99" y="11" width="260" height="37"/>
+                                            <rect key="frame" x="99" y="11" width="260" height="37.5"/>
                                             <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Distance: Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIv-1X-2qz">
-                                            <rect key="frame" x="99" y="48" width="190" height="37"/>
+                                            <rect key="frame" x="99" y="48.5" width="190" height="37"/>
                                             <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKR-FV-11Q">
-                                            <rect key="frame" x="297" y="69" width="78" height="37"/>
+                                            <rect key="frame" x="297" y="69.5" width="78" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="78" id="Nbx-vS-fd2"/>
                                             </constraints>
@@ -372,6 +355,16 @@
                                             <connections>
                                                 <segue destination="skk-8h-L1E" kind="show" identifier="trailToResultsSegue" id="nOS-dZ-lvn"/>
                                             </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="3SF-9a-U4Q">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VcQ-ZI-EnU">
+                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Profile"/>
+                                                <connections>
+                                                    <action selector="showLoginController:" destination="sp5-vJ-ORz" eventType="touchUpInside" id="0bE-2s-6zE"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -560,6 +553,7 @@
                             <constraint firstItem="5aE-8G-AhV" firstAttribute="leading" secondItem="axs-Qk-B9b" secondAttribute="trailing" constant="18" id="sc2-qV-cYK"/>
                             <constraint firstItem="axs-Qk-B9b" firstAttribute="leading" secondItem="Jlu-9z-GeQ" secondAttribute="trailing" constant="21" id="waj-z6-Lby"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="s1n-Oe-JlU"/>
                     </view>
                     <size key="freeformSize" width="375" height="91"/>
                     <connections>
@@ -585,6 +579,6 @@
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TAm-Ti-qAr"/>
+        <segue reference="nOS-dZ-lvn"/>
     </inferredMetricsTieBreakers>
 </document>
