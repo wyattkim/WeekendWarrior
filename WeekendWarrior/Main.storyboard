@@ -576,6 +576,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlu-9z-GeQ">
                                 <rect key="frame" x="16" y="56" width="40" height="30"/>
                                 <state key="normal" title="Dates"/>
+                                <connections>
+                                    <segue destination="v6B-Qb-sUz" kind="show" id="Ng3-rQ-14r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axs-Qk-B9b">
                                 <rect key="frame" x="77" y="56" width="42" height="30"/>
@@ -620,6 +623,22 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2141.5999999999999" y="-408.84557721139436"/>
+        </scene>
+        <!--Calendar Controller-->
+        <scene sceneID="536-9P-8yg">
+            <objects>
+                <viewController id="v6B-Qb-sUz" customClass="CalendarController" customModule="WeekendWarrior" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e6F-Ty-Jol">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="hsg-lk-91v"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WD-co-03d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2950" y="-629"/>
         </scene>
     </scenes>
     <resources>

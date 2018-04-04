@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import Lock
 import Auth0
+import CalendarDateRangePickerViewController
+
 
 class TrailDisplayController: UIViewController {
     var trail = Trail(json: ["": "" as AnyObject])
@@ -110,6 +112,7 @@ class TrailDisplayController: UIViewController {
             destinationViewController.userCoordinate = coordinates
             destinationViewController.trails = trails
         }
+        
     }
     
     @IBAction func directionsClicked(_ sender: UIButton) {

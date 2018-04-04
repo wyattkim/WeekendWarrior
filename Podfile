@@ -17,6 +17,7 @@ target 'WeekendWarrior' do
     pod 'Flurry-iOS-SDK/FlurryAds' #Advertising Pod (requires Analytics)
     pod 'Lock', '~> 2.5'
     pod 'Auth0', '~> 1.0'
+    pod 'CalendarDateRangePickerViewController'
 
   # Pods for WeekendWarrior
 
