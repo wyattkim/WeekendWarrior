@@ -17,8 +17,9 @@ import FirebaseAnalytics
     var trails = [Trail]()
     public var userCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
     @IBOutlet var trailTable: UITableView!
+    var currentOpen = false;
     var client = Client(appID: "OSWJ3BZ2RC", apiKey: "0256f1b463da714f65f61ace9d973b10")
-    
+    @IBOutlet weak var openButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,12 @@ import FirebaseAnalytics
         
         trailTable.delegate = self
         trailTable.dataSource = self
+    }
+    
+    
+    @IBAction func openButtonPressed(_ sender: Any) {
+        self.currentOpen = !currentOpen;
+        self.searchByDistance(openOnly:currentOpen);
     }
     
     func searchByDistance(openOnly: Bool) {
@@ -45,7 +52,7 @@ import FirebaseAnalytics
         query.hitsPerPage = 15
         query.facets = ["*"]
         if (openOnly) {
-            query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\") AND (NOT status:\"Unknown\")"
+            query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\") AND (NOT status:\"None\")"
         }
         query.getRankingInfo = true
 
@@ -103,6 +110,10 @@ import FirebaseAnalytics
             cell.statusLabel.textColor = UIColor.black
             cell.statusLabel.text = "Unknown"
         } else if (trail.status == "Closed") {
+            cell.statusLabel.textColor = UIColor.red
+        } else if (trail.status == "Open") {
+            cell.statusLabel.textColor = UIColor.green
+        } else if (trail.status == "Temporarily Closed") {
             cell.statusLabel.textColor = UIColor.red
         }
         var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"

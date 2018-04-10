@@ -11,11 +11,7 @@ import GooglePlaces
 
 class SearchViewController: UIViewController {
     
-    @IBAction func autocompleteClicked(_ sender: UIButton) {
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
-    }
+
     
     @IBAction func openOnlyFilter(_ sender: UIButton) {
 
@@ -42,7 +38,7 @@ extension SearchViewController: GMSAutocompleteViewControllerDelegate {
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
         print("Place attributions: \(place.attributions)")
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
@@ -52,7 +48,7 @@ extension SearchViewController: GMSAutocompleteViewControllerDelegate {
     
     // User canceled the operation.
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     // Turn the network activity indicator on and off again.

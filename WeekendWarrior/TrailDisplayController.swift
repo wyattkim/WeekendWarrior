@@ -16,6 +16,7 @@ import CalendarDateRangePickerViewController
 class TrailDisplayController: UIViewController {
     var trail = Trail(json: ["": "" as AnyObject])
     var trails = [Trail]()
+    var currentOpenStatus = true;
     var currWeather: String = ""
     @IBOutlet weak var trailName: UILabel!
     @IBOutlet weak var trailPhoto: UIImageView!
@@ -24,6 +25,8 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var weatherSummary: UILabel!
     @IBOutlet weak var directionsButton: UIButton!
     
+    @IBAction func openOnlyPressed(_ sender: Any) {
+    }
     @IBAction func showLoginController(_ sender: UIButton) {
         Lock
             .classic()
