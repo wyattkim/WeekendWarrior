@@ -118,7 +118,7 @@ import FirebaseAnalytics
         cell.photoImageView.layer.masksToBounds = true
         let distanceString = String(trail.distance!)
         cell.distanceLabel.text = "Distance: " + distanceString + " miles"
-        cell.difficultyLabel.text = "Difficulty: " + trail.type!
+        //cell.difficultyLabel.text = "Difficulty: " + trail.type!
         return cell
     }
     
