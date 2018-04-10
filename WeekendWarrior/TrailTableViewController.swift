@@ -116,7 +116,9 @@ import FirebaseAnalytics
         cell.photoImageView.layer.borderColor = UIColor.white.cgColor
         cell.photoImageView.backgroundColor = UIColor.white
         cell.photoImageView.layer.masksToBounds = true
-        cell.distanceLabel.text = "Difficulty: Medium"
+        let distanceString = String(trail.distance!)
+        cell.distanceLabel.text = "Distance: " + distanceString + " miles"
+        cell.difficultyLabel.text = "Difficulty: " + trail.type!
         return cell
     }
     
