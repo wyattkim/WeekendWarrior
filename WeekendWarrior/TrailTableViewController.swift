@@ -24,14 +24,14 @@ import FirebaseAnalytics
         super.viewDidLoad()
         
         if (trails.isEmpty) {
-            searchByDistance()
+            searchByDistance(openOnly: false)
         }
         
         trailTable.delegate = self
         trailTable.dataSource = self
     }
     
-    func searchByDistance() {
+    func searchByDistance(openOnly: Bool) {
         let index = client.index(withName: "alpha_trails")
         let settings = ["attributesForFaceting": ["status"], "ranking": ["geo", "filters"]]
         index.setSettings(settings)
@@ -44,7 +44,9 @@ import FirebaseAnalytics
         query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc"]
         query.hitsPerPage = 15
         query.facets = ["*"]
-        query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\")"
+        if (openOnly) {
+            query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\") AND (NOT status:\"Unknown\")"
+        }
         query.getRankingInfo = true
 
         index.search(query, completionHandler: { (content, error) -> Void in

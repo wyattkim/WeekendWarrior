@@ -12,16 +12,29 @@ import CalendarDateRangePickerViewController
 class CalendarController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
+    func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.purple
+        view.backgroundColor = UIColor.white
         let dateRangePickerViewController = CalendarDateRangePickerViewController(collectionViewLayout: UICollectionViewFlowLayout())
         dateRangePickerViewController.delegate = self
+        
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 10, width: 410, height: 44))
+        dateRangePickerViewController.view.addSubview(navBar)
+        let navItem = UINavigationItem(title: "Dates")
+        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(CalendarController.cancelButtonPressed(_:)))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(CalendarController.cancelButtonPressed(_:)))
+        navItem.leftBarButtonItem = cancelItem
+        navItem.rightBarButtonItem = doneItem
+        navBar.setItems([navItem], animated: false)
+        
         DispatchQueue.main.async {
             self.present(dateRangePickerViewController, animated: true, completion: nil)
         }
-
-
     }
     
     @IBAction func didTapButton(_ sender: Any) {

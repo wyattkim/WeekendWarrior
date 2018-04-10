@@ -23,6 +23,9 @@
 		DB6A359B20439033007BD0B7 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A359A20439033007BD0B7 /* Trail.swift */; };
 		DB9FDC97204E532300C3A663 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB9FDC96204E532300C3A663 /* GoogleService-Info.plist */; };
 		DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE55B37201FEE3C007337C0 /* ViewController.m */; };
+		DBF141B720748835006FD543 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBF141B620748835006FD543 /* Auth0.plist */; };
+		DBF141B920748981006FD543 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF141B820748981006FD543 /* CalendarController.swift */; };
+		DBF141BB2076FB94006FD543 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF141BA2076FB94006FD543 /* SearchViewController.swift */; };
 		E713C0AB204B87E7007CEC5F /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */; };
 		E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AC204B8825007CEC5F /* WeatherData.swift */; };
 		E713C0AF204B8843007CEC5F /* WeatherHourData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AE204B8843007CEC5F /* WeatherHourData.swift */; };
@@ -63,7 +66,7 @@
 		7BA9B5FA3CCFF00DFC299E3D /* Pods-WeekendWarriorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarriorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarriorUITests/Pods-WeekendWarriorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7A691F643921E9C108F6A09 /* Pods-WeekendWarriorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeekendWarriorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeekendWarriorTests/Pods-WeekendWarriorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB03581E2008402B00622A08 /* WeekendWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekendWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB0358212008402B00622A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB0358212008402B00622A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		DB0358232008402B00622A08 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		DB0358252008402B00622A08 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		DB0358272008402B00622A08 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
@@ -83,6 +86,9 @@
 		DBE55B36201FEE3B007337C0 /* WeekendWarrior-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeekendWarrior-Bridging-Header.h"; sourceTree = "<group>"; };
 		DBE55B37201FEE3C007337C0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DBE55B39201FEE47007337C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DBF141B620748835006FD543 /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		DBF141B820748981006FD543 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		DBF141BA2076FB94006FD543 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		E713C0AC204B8825007CEC5F /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		E713C0AE204B8843007CEC5F /* WeatherHourData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHourData.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 			children = (
 				E713C0A9204B87AE007CEC5F /* WeatherAPI */,
 				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
+				DBF141B820748981006FD543 /* CalendarController.swift */,
 				DB6A359A20439033007BD0B7 /* Trail.swift */,
 				E7AFA6F5204F08EE00C66697 /* Main.storyboard */,
 				DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */,
@@ -181,6 +188,7 @@
 				DBE55B37201FEE3C007337C0 /* ViewController.m */,
 				E78456332027BBDE00CA4717 /* SecondViewController.h */,
 				E78456342027BBDE00CA4717 /* SecondViewController.m */,
+				DBF141BA2076FB94006FD543 /* SearchViewController.swift */,
 				DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
@@ -190,6 +198,7 @@
 				DB0358272008402B00622A08 /* ModelController.swift */,
 				DB03582C2008402B00622A08 /* Assets.xcassets */,
 				DB03582E2008402B00622A08 /* LaunchScreen.storyboard */,
+				DBF141B620748835006FD543 /* Auth0.plist */,
 				DB0358312008402C00622A08 /* Info.plist */,
 				DBE55B36201FEE3B007337C0 /* WeekendWarrior-Bridging-Header.h */,
 			);
@@ -350,6 +359,7 @@
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
 				E7AFA6F6204F08EF00C66697 /* Main.storyboard in Resources */,
 				E71CAD9520742D28005C602B /* line.png in Resources */,
+				DBF141B720748835006FD543 /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +552,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D398F7204A2A4500100645 /* API.swift in Sources */,
+				DBF141B920748981006FD543 /* CalendarController.swift in Sources */,
 				E7D398FB204A2BAF00100645 /* DataManager.swift in Sources */,
+				DBF141BB2076FB94006FD543 /* SearchViewController.swift in Sources */,
 				E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */,
 				DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */,
 				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
