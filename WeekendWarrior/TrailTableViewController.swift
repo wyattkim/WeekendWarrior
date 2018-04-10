@@ -31,7 +31,7 @@ import FirebaseAnalytics
     }
     
     func searchByDistance(openOnly: Bool) {
-        let index = client.index(withName: "alpha_trails")
+        let index = client.index(withName: "beta_trails")
         let settings = ["attributesForFaceting": ["status"], "ranking": ["geo", "filters"]]
         index.setSettings(settings)
         let query = Query(query: "")
@@ -40,7 +40,7 @@ import FirebaseAnalytics
         } else {
             query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
         }
-        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc"]
+        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc", "distance", "elevation", "number", "type"]
         query.hitsPerPage = 15
         query.facets = ["*"]
         if (openOnly) {
