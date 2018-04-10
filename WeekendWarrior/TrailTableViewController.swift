@@ -19,7 +19,6 @@ import FirebaseAnalytics
     @IBOutlet var trailTable: UITableView!
     var client = Client(appID: "OSWJ3BZ2RC", apiKey: "0256f1b463da714f65f61ace9d973b10")
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +59,9 @@ import FirebaseAnalytics
                     tmp.append(Trail(json: hit))
                 }
                 self.trails = tmp
-                self.trailTable.reloadData()
+                DispatchQueue.main.async {
+                    self.trailTable.reloadData()
+                }
             }
         })
     }

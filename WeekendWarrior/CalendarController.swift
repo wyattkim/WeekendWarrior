@@ -13,7 +13,7 @@ class CalendarController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     func cancelButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
         self.dismiss(animated: true, completion: nil)
     }
     

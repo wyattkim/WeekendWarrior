@@ -22,5 +22,10 @@ struct Trail {
         let geoloc = json["_geoloc"] as? [String:Any]
         return (geoloc!["lng"] as! Double)
     }
-
+    
+    var distance: Double? {return json["distance"] as? Double}
+    var elevation: Double? {return json["elevation"] as? Double}
+    var difficulty: String? {return json["difficulty"] as? String}
+    var number: String? {return json["number"] as? String}
+    var type: String? {return json["type"] as? String}
 }
