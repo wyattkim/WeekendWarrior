@@ -10,6 +10,8 @@ import CoreLocation
 import AlgoliaSearch
 import AFNetworking
 import FirebaseAnalytics
+import SafariServices
+
 
 
 @objc class TrailTableViewController: UITableViewController {
@@ -20,6 +22,7 @@ import FirebaseAnalytics
     var currentOpen = false;
     var client = Client(appID: "OSWJ3BZ2RC", apiKey: "0256f1b463da714f65f61ace9d973b10")
     @IBOutlet weak var openButton: UIButton!
+    @IBOutlet weak var changeLocation: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,11 @@ import FirebaseAnalytics
         trailTable.dataSource = self
     }
     
+    @IBAction func callSelected(_ sender: Any) {
+        let url: NSURL = URL(string: "TEL://1234567890")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        // only works on an actualy phone :(
+    }
     
     @IBAction func openButtonPressed(_ sender: Any) {
         self.currentOpen = !currentOpen;

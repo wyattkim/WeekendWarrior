@@ -25,8 +25,17 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var weatherSummary: UILabel!
     @IBOutlet weak var directionsButton: UIButton!
     
-    @IBAction func openOnlyPressed(_ sender: Any) {
+    @IBAction func shareClicked(_ sender: Any) {
+        let message = "Check out this trail I'd love to backpack with you on WeekendWarrior."
+        //Set the link to share.
+        if let link = NSURL(string: "http://yoururl.com")
+        {
+            let objectsToShare = [message,link] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            self.present(activityVC, animated: true, completion: nil)
+        }
     }
+    
     @IBAction func showLoginController(_ sender: UIButton) {
         Lock
             .classic()
@@ -70,6 +79,14 @@ class TrailDisplayController: UIViewController {
         static let Latitude: Double = 37.8267
         static let Longitude: Double = -122.423
         
+    }
+    
+    @IBAction func weatherPressed(_ sender: Any) {
+        let lat = String(format:"%f", trail.lat!)
+        let lng = String(format:"%f", trail.lng!)
+        if let url = URL(string: "https://forecast.weather.gov/MapClick.php?site=twc&textField1=" + lat + "&textField2=" + lng + "#.Ws14QNPwaHp") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
