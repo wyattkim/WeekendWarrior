@@ -14,7 +14,7 @@ class CalendarController: UIViewController {
     
     func cancelButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     override func viewDidLoad() {
