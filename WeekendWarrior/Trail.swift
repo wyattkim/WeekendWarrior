@@ -28,8 +28,5 @@ struct Trail {
     var difficulty: String? {return json["difficulty"] as? String}
     var number: String? {return json["number"] as? String}
     var type: String? {return json["type"] as? String}
-<<<<<<< HEAD
-=======
 
->>>>>>> 1afd8141c4f3668e5abe1ca6a08abf229a953718
 }

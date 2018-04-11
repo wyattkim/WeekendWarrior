@@ -24,6 +24,11 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var statusButton: UIButton!
     @IBOutlet weak var weatherSummary: UILabel!
     @IBOutlet weak var directionsButton: UIButton!
+    @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var elevationLabel: UILabel!
+    var profile: UserInfo!
+    
     
     @IBAction func shareClicked(_ sender: Any) {
         let message = "Check out this trail I'd love to backpack with you on WeekendWarrior."
@@ -59,6 +64,8 @@ class TrailDisplayController: UIViewController {
                         case .success(let profile):
                             // You've got a UserProfile object
                             print(profile.email)
+                            self.profile = profile
+                            self.performSegue(withIdentifier: "profileSegue", sender: nil)
                         case .failure(let error):
                             // You've got an error
                             print("Failed with \(error)")
@@ -107,6 +114,12 @@ class TrailDisplayController: UIViewController {
         }
         trailName.text = trail.name
         trailDescription.text = trail.description
+        let distanceString = String(trail.distance!)
+        distanceLabel.text = "Distance: " + distanceString + " miles"
+        difficultyLabel.text = "Difficulty: " + trail.difficulty!.lowercased()
+        let elevationString = String(trail.elevation!)
+        elevationLabel.text = "Elevation: " + elevationString + " feet"
+        
        //  trailDescription.sizeToFit()
         statusButton.setTitle(trail.status, for: .normal)
         var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"
@@ -131,6 +144,10 @@ class TrailDisplayController: UIViewController {
         if let destinationViewController = segue.destination as? TrailTableViewController {
             destinationViewController.userCoordinate = coordinates
             destinationViewController.trails = trails
+        }
+        
+        if let destinationViewController = segue.destination as? ProfileViewController {
+            destinationViewController.profile = self.profile
         }
         
     }

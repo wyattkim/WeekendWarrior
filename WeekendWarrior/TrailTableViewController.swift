@@ -56,7 +56,7 @@ import SafariServices
         } else {
             query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
         }
-        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc", "distance", "elevation", "number", "type"]
+        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc", "distance", "elevation", "number", "type", "difficulty"]
         query.hitsPerPage = 15
         query.facets = ["*"]
         if (openOnly) {
@@ -138,7 +138,7 @@ import SafariServices
         cell.photoImageView.layer.masksToBounds = true
         let distanceString = String(trail.distance!)
         cell.distanceLabel.text = "Distance: " + distanceString + " miles"
-        //cell.difficultyLabel.text = "Difficulty: " + trail.type!
+        cell.difficultyLabel.text = "Difficulty: " + trail.difficulty!.lowercased()
         return cell
     }
     

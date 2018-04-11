@@ -19,6 +19,8 @@
 		DB03583B2008402C00622A08 /* WeekendWarriorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03583A2008402C00622A08 /* WeekendWarriorTests.swift */; };
 		DB0358462008402C00622A08 /* WeekendWarriorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */; };
 		DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */; };
+		DB43D1A0207DC68B0083CB25 /* Screen Shot 2018-04-09 at 5.14.18 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = DB43D19F207DC68B0083CB25 /* Screen Shot 2018-04-09 at 5.14.18 PM.png */; };
+		DB43D1A2207DD6320083CB25 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43D1A1207DD6320083CB25 /* ProfileViewController.swift */; };
 		DB6A3599203F6F18007BD0B7 /* TrailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */; };
 		DB6A359B20439033007BD0B7 /* Trail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6A359A20439033007BD0B7 /* Trail.swift */; };
 		DB9FDC97204E532300C3A663 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB9FDC96204E532300C3A663 /* GoogleService-Info.plist */; };
@@ -80,6 +82,8 @@
 		DB0358452008402C00622A08 /* WeekendWarriorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendWarriorUITests.swift; sourceTree = "<group>"; };
 		DB0358472008402C00622A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB1A7EA9202A55F700210E6C /* TrailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTableViewCell.swift; sourceTree = "<group>"; };
+		DB43D19F207DC68B0083CB25 /* Screen Shot 2018-04-09 at 5.14.18 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-04-09 at 5.14.18 PM.png"; sourceTree = "<group>"; };
+		DB43D1A1207DD6320083CB25 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailTableViewController.swift; sourceTree = "<group>"; };
 		DB6A359A20439033007BD0B7 /* Trail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trail.swift; sourceTree = "<group>"; };
 		DB9FDC96204E532300C3A663 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		DB0358202008402B00622A08 /* WeekendWarrior */ = {
 			isa = PBXGroup;
 			children = (
+				DB43D19F207DC68B0083CB25 /* Screen Shot 2018-04-09 at 5.14.18 PM.png */,
 				DBF141BC207C8360006FD543 /* import.rb */,
 				E713C0A9204B87AE007CEC5F /* WeatherAPI */,
 				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
@@ -191,6 +196,7 @@
 				E78456342027BBDE00CA4717 /* SecondViewController.m */,
 				DBF141BA2076FB94006FD543 /* SearchViewController.swift */,
 				DB6A3598203F6F17007BD0B7 /* TrailTableViewController.swift */,
+				DB43D1A1207DD6320083CB25 /* ProfileViewController.swift */,
 				DB0358212008402B00622A08 /* AppDelegate.swift */,
 				DB0358232008402B00622A08 /* RootViewController.swift */,
 				DB0358252008402B00622A08 /* DataViewController.swift */,
@@ -357,6 +363,7 @@
 				DB9FDC97204E532300C3A663 /* GoogleService-Info.plist in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
 				E7AFA6F6204F08EF00C66697 /* Main.storyboard in Resources */,
+				DB43D1A0207DC68B0083CB25 /* Screen Shot 2018-04-09 at 5.14.18 PM.png in Resources */,
 				E71CAD9520742D28005C602B /* line.png in Resources */,
 				DBF141BD207C8361006FD543 /* import.rb in Resources */,
 				DBF141B720748835006FD543 /* Auth0.plist in Resources */,
@@ -557,6 +564,7 @@
 				DBF141BB2076FB94006FD543 /* SearchViewController.swift in Sources */,
 				E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */,
 				DBE55B38201FEE3C007337C0 /* ViewController.m in Sources */,
+				DB43D1A2207DD6320083CB25 /* ProfileViewController.swift in Sources */,
 				DB0358242008402B00622A08 /* RootViewController.swift in Sources */,
 				DB1A7EAA202A55F700210E6C /* TrailTableViewCell.swift in Sources */,
 				DB6A3599203F6F18007BD0B7 /* TrailTableViewController.swift in Sources */,
