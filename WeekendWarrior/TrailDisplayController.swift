@@ -31,7 +31,7 @@ class TrailDisplayController: UIViewController {
     
     
     @IBAction func shareClicked(_ sender: Any) {
-        let message = "Check out this trail I'd love to backpack with you on WeekendWarrior."
+        let message = "Check out this trail I'd love to backpack with you on WeekendWarrior." 
         //Set the link to share.
         if let link = NSURL(string: "http://yoururl.com")
         {
