@@ -39,7 +39,7 @@ import FirebaseAnalytics
     }
     
     func searchByDistance(openOnly: Bool) {
-        let index = client.index(withName: "alpha_trails")
+        let index = client.index(withName: "beta_trails")
         let settings = ["attributesForFaceting": ["status"], "ranking": ["geo", "filters"]]
         index.setSettings(settings)
         let query = Query(query: "")
@@ -48,7 +48,7 @@ import FirebaseAnalytics
         } else {
             query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
         }
-        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc"]
+        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc", "distance", "elevation", "number", "type"]
         query.hitsPerPage = 15
         query.facets = ["*"]
         if (openOnly) {
@@ -67,7 +67,9 @@ import FirebaseAnalytics
                     tmp.append(Trail(json: hit))
                 }
                 self.trails = tmp
-                self.trailTable.reloadData()
+                DispatchQueue.main.async {
+                    self.trailTable.reloadData()
+                }
             }
         })
     }
@@ -126,7 +128,9 @@ import FirebaseAnalytics
         cell.photoImageView.layer.borderColor = UIColor.white.cgColor
         cell.photoImageView.backgroundColor = UIColor.white
         cell.photoImageView.layer.masksToBounds = true
-        cell.distanceLabel.text = "Difficulty: Medium"
+        let distanceString = String(trail.distance!)
+        cell.distanceLabel.text = "Distance: " + distanceString + " miles"
+        //cell.difficultyLabel.text = "Difficulty: " + trail.type!
         return cell
     }
     

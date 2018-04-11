@@ -26,6 +26,7 @@
 		DBF141B720748835006FD543 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBF141B620748835006FD543 /* Auth0.plist */; };
 		DBF141B920748981006FD543 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF141B820748981006FD543 /* CalendarController.swift */; };
 		DBF141BB2076FB94006FD543 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF141BA2076FB94006FD543 /* SearchViewController.swift */; };
+		DBF141BD207C8361006FD543 /* import.rb in Resources */ = {isa = PBXBuildFile; fileRef = DBF141BC207C8360006FD543 /* import.rb */; };
 		E713C0AB204B87E7007CEC5F /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */; };
 		E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AC204B8825007CEC5F /* WeatherData.swift */; };
 		E713C0AF204B8843007CEC5F /* WeatherHourData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AE204B8843007CEC5F /* WeatherHourData.swift */; };
@@ -90,6 +91,7 @@
 		DBF141B620748835006FD543 /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		DBF141B820748981006FD543 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		DBF141BA2076FB94006FD543 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DBF141BC207C8360006FD543 /* import.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = import.rb; sourceTree = SOURCE_ROOT; };
 		E713C0AA204B87E7007CEC5F /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		E713C0AC204B8825007CEC5F /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		E713C0AE204B8843007CEC5F /* WeatherHourData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHourData.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		DB0358202008402B00622A08 /* WeekendWarrior */ = {
 			isa = PBXGroup;
 			children = (
+				DBF141BC207C8360006FD543 /* import.rb */,
 				E713C0A9204B87AE007CEC5F /* WeatherAPI */,
 				E7D063FC2034C9BE007CAEEF /* TrailDisplayController.swift */,
 				DBF141B820748981006FD543 /* CalendarController.swift */,
@@ -363,6 +366,7 @@
 				E7CF0BAE207C41BA001F8B44 /* Screen Shot 2018-04-09 at 5.14.18 PM.png in Resources */,
 				E7AFA6F6204F08EF00C66697 /* Main.storyboard in Resources */,
 				E71CAD9520742D28005C602B /* line.png in Resources */,
+				DBF141BD207C8361006FD543 /* import.rb in Resources */,
 				DBF141B720748835006FD543 /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
