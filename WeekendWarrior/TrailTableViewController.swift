@@ -17,7 +17,7 @@ import SafariServices
 @objc class TrailTableViewController: UITableViewController {
     //MARK: Properties
     var trails = [Trail]()
-    public var userCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
+    public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
     @IBOutlet var trailTable: UITableView!
     var currentOpen = false;
     var client = Client(appID: "OSWJ3BZ2RC", apiKey: "0256f1b463da714f65f61ace9d973b10")
@@ -42,8 +42,9 @@ import SafariServices
     }
     
     @IBAction func openButtonPressed(_ sender: Any) {
-        self.currentOpen = !currentOpen;
-        self.searchByDistance(openOnly:currentOpen);
+
+        searchByDistance(openOnly: true);
+
     }
     
     func searchByDistance(openOnly: Bool) {
@@ -51,24 +52,26 @@ import SafariServices
         let settings = ["attributesForFaceting": ["status"], "ranking": ["geo", "filters"]]
         index.setSettings(settings)
         let query = Query(query: "")
-        if userCoordinate.latitude == 0.000000 && userCoordinate.longitude == 0.000000 {
+        if coordinates.latitude == 0.000000 && coordinates.longitude == 0.000000 {
             query.aroundLatLngViaIP = true;
         } else {
-            query.aroundLatLng = LatLng(lat: userCoordinate.latitude, lng: userCoordinate.longitude)
+            query.aroundLatLng = LatLng(lat: coordinates.latitude, lng: coordinates.longitude)
         }
         query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc", "distance", "elevation", "number", "type", "difficulty"]
         query.hitsPerPage = 15
         query.facets = ["*"]
+
         if (openOnly) {
-            query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\") AND (NOT status:\"None\")"
+            query.filters = "(NOT status:\"Closed\") AND (NOT status:\"Temporarily Closed\") AND (NOT status:\"None\") AND (NOT status:\"Unknown\") AND (NOT status:\"Not Cleared\") AND (NOT status:\"Unreachable\")"
         }
+
         query.getRankingInfo = true
 
         index.search(query, completionHandler: { (content, error) -> Void in
             if error == nil {
                 guard let hits = content!["hits"] as? [[String: AnyObject]] else { return }
                 Analytics.logEvent(AnalyticsEventSearch, parameters: [
-                    AnalyticsParameterSearchTerm: "lat: \(String(self.userCoordinate.latitude)), lng: \(String(self.userCoordinate.longitude))"
+                    AnalyticsParameterSearchTerm: "lat: \(String(self.coordinates.latitude)), lng: \(String(self.coordinates.longitude))"
                     ])
                 var tmp = [Trail]()
                 for hit in hits {
@@ -160,7 +163,7 @@ import SafariServices
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let testController = storyboard.instantiateViewController(withIdentifier :"TrailDisplayController") as! TrailDisplayController
         testController.trail = selectedTrail
-        testController.coordinates = userCoordinate
+        testController.coordinates = self.coordinates
         testController.trails = trails
         self.present(testController, animated: true)
     }
@@ -171,8 +174,10 @@ extension TrailTableViewController: GMSAutocompleteViewControllerDelegate {
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
+        print("Place address: \(String(describing: place.formattedAddress))")
+        print("Place attributions: \(String(describing: place.attributions))")
+        self.coordinates = place.coordinate
+        searchByDistance(openOnly: false)
         dismiss(animated: false, completion: nil)
     }
     

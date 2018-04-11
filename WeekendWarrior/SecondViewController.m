@@ -33,7 +33,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"trailTableSegue"]){
         TrailTableViewController *controller = (TrailTableViewController *)segue.destinationViewController;
-        controller.userCoordinate = self.homebaseCoordinate;
+        controller.coordinates = self.homebaseCoordinate;
     }
 }
 

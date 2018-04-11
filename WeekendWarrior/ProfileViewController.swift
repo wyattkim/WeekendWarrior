@@ -12,11 +12,14 @@ import Auth0
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
-    public var profile: UserInfo!
+    public var email: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = profile.email
+        DispatchQueue.main.async {
+            self.nameLabel.text = self.email
+        }
+        
         // Do any additional setup after loading the view.
     }
 

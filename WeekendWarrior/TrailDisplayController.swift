@@ -63,9 +63,17 @@ class TrailDisplayController: UIViewController {
                         switch result {
                         case .success(let profile):
                             // You've got a UserProfile object
-                            print(profile.email)
+                            print(profile.email!)
                             self.profile = profile
+
+                            var todaysDate:NSDate = NSDate()
+                            var dateFormatter:DateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm:ss:ms"
+                            var DateInFormat:String = dateFormatter.string(from: todaysDate as Date)
+                            print(DateInFormat)
+                            
                             self.performSegue(withIdentifier: "profileSegue", sender: nil)
+                            
                         case .failure(let error):
                             // You've got an error
                             print("Failed with \(error)")
@@ -142,12 +150,12 @@ class TrailDisplayController: UIViewController {
         // Pass the selected object to the new view controller.
         
         if let destinationViewController = segue.destination as? TrailTableViewController {
-            destinationViewController.userCoordinate = coordinates
+            destinationViewController.coordinates = coordinates
             destinationViewController.trails = trails
         }
         
         if let destinationViewController = segue.destination as? ProfileViewController {
-            destinationViewController.profile = self.profile
+            destinationViewController.email = self.profile.email
         }
         
     }
