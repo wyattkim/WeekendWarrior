@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skk-8h-L1E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skk-8h-L1E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+        </array>
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+        <array key="ArialBold.ttf">
+            <string>Arial-BoldMT</string>
+        </array>
+        <array key="ArialHB.ttc">
+            <string>ArialHebrew</string>
+            <string>ArialHebrew-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -640,15 +655,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSH-kk-5Af">
-                                <rect key="frame" x="62" y="66" width="251" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="picus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSH-kk-5Af">
+                                <rect key="frame" x="62" y="175" width="251" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jNo-MQ-lU7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-kF-MMv">
+                                <rect key="frame" x="58" y="217" width="258" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="fbg-Gh-bS6"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="To Do"/>
+                                    <segment title="Completed"/>
+                                    <segment title="All"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample list.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wqa-91-FGs">
+                                <rect key="frame" x="0.0" y="253" width="375" height="414"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sam.png" translatesAutoresizingMaskIntoConstraints="NO" id="ONy-sj-NhO">
+                                <rect key="frame" x="139" y="29" width="97" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Qjx-bW-YFl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kSH-kk-5Af" firstAttribute="top" secondItem="ONy-sj-NhO" secondAttribute="bottom" constant="18" id="0kg-Cd-f4v"/>
+                            <constraint firstItem="ONy-sj-NhO" firstAttribute="leading" secondItem="hny-GJ-x7R" secondAttribute="leading" constant="130" id="1sy-xw-Bwa"/>
+                            <constraint firstItem="Wqa-91-FGs" firstAttribute="top" secondItem="3m4-kF-MMv" secondAttribute="bottom" constant="8" symbolic="YES" id="2QT-UO-Xxe"/>
+                            <constraint firstItem="3m4-kF-MMv" firstAttribute="top" secondItem="kSH-kk-5Af" secondAttribute="bottom" constant="21" id="2pP-nQ-iEY"/>
+                            <constraint firstItem="Wqa-91-FGs" firstAttribute="bottom" secondItem="hny-GJ-x7R" secondAttribute="bottom" id="2uG-gs-EJB"/>
+                            <constraint firstItem="kSH-kk-5Af" firstAttribute="centerX" secondItem="3m4-kF-MMv" secondAttribute="centerX" id="4cf-JS-y7f"/>
+                            <constraint firstItem="ONy-sj-NhO" firstAttribute="centerX" secondItem="kSH-kk-5Af" secondAttribute="centerX" id="9Vu-Rd-KIc"/>
+                            <constraint firstItem="Wqa-91-FGs" firstAttribute="leading" secondItem="mVD-EK-Irx" secondAttribute="leading" id="Qxt-RJ-G83"/>
+                            <constraint firstItem="3m4-kF-MMv" firstAttribute="centerX" secondItem="Wqa-91-FGs" secondAttribute="centerX" id="Rde-sL-Tq8"/>
+                            <constraint firstItem="3m4-kF-MMv" firstAttribute="leading" secondItem="hny-GJ-x7R" secondAttribute="leading" constant="58" id="bD4-4K-C2v"/>
+                            <constraint firstAttribute="trailing" secondItem="Wqa-91-FGs" secondAttribute="trailing" id="ccB-wv-5wM"/>
+                            <constraint firstItem="kSH-kk-5Af" firstAttribute="leading" secondItem="hny-GJ-x7R" secondAttribute="leading" constant="62" id="kzJ-1h-7s6"/>
+                            <constraint firstItem="ONy-sj-NhO" firstAttribute="top" secondItem="hny-GJ-x7R" secondAttribute="top" constant="9" id="m8B-ep-jbg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hny-GJ-x7R"/>
                     </view>
                     <connections>
@@ -695,6 +747,8 @@
         <image name="Screen Shot 2018-04-09 at 5.14.18 PM.png" width="1538" height="396"/>
         <image name="defaultPhoto" width="540" height="540"/>
         <image name="line.png" width="1538" height="80"/>
+        <image name="sam.png" width="440" height="486"/>
+        <image name="sample list.png" width="754" height="812"/>
         <image name="share.png" width="78" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>

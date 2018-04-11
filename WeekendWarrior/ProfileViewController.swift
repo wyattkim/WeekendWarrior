@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
-            self.nameLabel.text = self.email
+            //self.nameLabel.text = self.email
         }
         
         // Do any additional setup after loading the view.
