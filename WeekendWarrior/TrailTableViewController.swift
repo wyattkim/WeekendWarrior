@@ -12,8 +12,8 @@ import AFNetworking
 import FirebaseAnalytics
 import SafariServices
 import CalendarDateRangePickerViewController
-
-
+import Lock
+import Auth0
 
 @objc class TrailTableViewController: UITableViewController, CalendarDateRangePickerViewControllerDelegate  {
     func didTapCancel() {
@@ -36,6 +36,7 @@ import CalendarDateRangePickerViewController
     @IBOutlet weak var changeLocation: UIBarButtonItem!
     var currentNumberOfDays: Int!
     var dateRangePickerViewController: CalendarDateRangePickerViewController!
+    var profile: UserInfo!
     
     @IBAction func DatesButtonPressed(_ sender: Any) {
         dateRangePickerViewController = CalendarDateRangePickerViewController(collectionViewLayout: UICollectionViewFlowLayout())
@@ -216,6 +217,7 @@ import CalendarDateRangePickerViewController
         testController.trail = selectedTrail
         testController.coordinates = self.coordinates
         testController.trails = trails
+        testController.profile = self.profile
         self.present(testController, animated: true)
     }
 }

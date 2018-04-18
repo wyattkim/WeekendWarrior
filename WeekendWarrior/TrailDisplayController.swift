@@ -29,8 +29,6 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var elevationLabel: UILabel!
     var profile: UserInfo!
-    var userEmail: String!
-    
     
     @IBAction func shareClicked(_ sender: Any) {
         let message = "Check out this trail I'd love to backpack with you on WeekendWarrior." 
@@ -43,8 +41,8 @@ class TrailDisplayController: UIViewController {
         }
     }
     @IBAction func todoButtonClicked(_ sender: Any) {
-       if (userEmail != nil) {
-            print(userEmail)
+       if (profile != nil) {
+            print(profile.email)
             print(trail.id)
         } else {
         var refreshAlert = UIAlertController(title: "Account Needed", message: "To add a trail to your to do list, please create an account!", preferredStyle: UIAlertControllerStyle.alert)
@@ -61,6 +59,10 @@ class TrailDisplayController: UIViewController {
     }
     
     @IBAction func showLoginController(_ sender: UIButton) {
+        if (profile != nil) {
+            self.performSegue(withIdentifier: "profileSegue", sender: nil)
+        }
+        
         Lock
             .classic()
             .withOptions {
@@ -166,11 +168,13 @@ class TrailDisplayController: UIViewController {
         if let destinationViewController = segue.destination as? TrailTableViewController {
             destinationViewController.coordinates = coordinates
             destinationViewController.trails = trails
+            destinationViewController.profile = self.profile
         }
         
         if let destinationViewController = segue.destination as? ProfileViewController {
             destinationViewController.email = self.profile.email
             destinationViewController.trail = self.trail
+            destinationViewController.profile = self.profile
         }
         
     }
