@@ -65,12 +65,6 @@ class TrailDisplayController: UIViewController {
                             // You've got a UserProfile object
                             print(profile.email!)
                             self.profile = profile
-
-                            var todaysDate:NSDate = NSDate()
-                            var dateFormatter:DateFormatter = DateFormatter()
-                            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm:ss:ms"
-                            var DateInFormat:String = dateFormatter.string(from: todaysDate as Date)
-                            print(DateInFormat)
                             
                             self.performSegue(withIdentifier: "profileSegue", sender: nil)
                             
@@ -156,6 +150,7 @@ class TrailDisplayController: UIViewController {
         
         if let destinationViewController = segue.destination as? ProfileViewController {
             destinationViewController.email = self.profile.email
+            destinationViewController.trail = self.trail
         }
         
     }
