@@ -17,12 +17,15 @@ import Auth0
 
 @objc class TrailTableViewController: UITableViewController, CalendarDateRangePickerViewControllerDelegate  {
     func didTapCancel() {
-        //pop view
+        DispatchQueue.main.async {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
-        //pop view
-        //get dates
+        DispatchQueue.main.async {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     //MARK: Properties
@@ -240,7 +243,9 @@ extension TrailTableViewController: GMSAutocompleteViewControllerDelegate {
     
     // User canceled the operation.
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: false, completion: nil)
+        DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // Turn the network activity indicator on and off again.
@@ -256,14 +261,22 @@ extension TrailTableViewController: GMSAutocompleteViewControllerDelegate {
 
 extension CalendarController : CalendarDateRangePickerViewControllerDelegate {
     func didTapCancel() {
+        DispatchQueue.main.async {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
+        DispatchQueue.main.async {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     
     func didCancelPickingDateRange() {
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
     
     func didPickDateRange(startDate: Date!, endDate: Date!) {
@@ -271,7 +284,7 @@ extension CalendarController : CalendarDateRangePickerViewControllerDelegate {
         dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
         label.text = dateFormatter.string(from: startDate) + " to " + dateFormatter.string(from: endDate)
         DispatchQueue.main.async {
-            print("flag6")
+            self.dismiss(animated: true, completion: nil)
         }
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
