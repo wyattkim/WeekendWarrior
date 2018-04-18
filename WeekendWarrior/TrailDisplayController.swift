@@ -21,6 +21,7 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var trailName: UILabel!
     @IBOutlet weak var trailPhoto: UIImageView!
     @IBOutlet weak var trailDescription: UILabel!
+    @IBOutlet weak var profileButton: UIBarButtonItem!
     @IBOutlet weak var statusButton: UIButton!
     @IBOutlet weak var weatherSummary: UILabel!
     @IBOutlet weak var directionsButton: UIButton!
@@ -28,6 +29,7 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var elevationLabel: UILabel!
     var profile: UserInfo!
+    var userEmail: String!
     
     
     @IBAction func shareClicked(_ sender: Any) {
@@ -38,6 +40,24 @@ class TrailDisplayController: UIViewController {
             let objectsToShare = [message,link] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             self.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    @IBAction func todoButtonClicked(_ sender: Any) {
+       if (userEmail != nil) {
+            // wyatt send this to algolia, add the email for the trail id it is under
+            print(profile.email)
+            print(trail.id)
+        } else {
+        var refreshAlert = UIAlertController(title: "Account Needed", message: "To add a trail to your to do list, please create an account!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            self.showLoginController(self.statusButton)
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
         }
     }
     
@@ -65,7 +85,8 @@ class TrailDisplayController: UIViewController {
                             // You've got a UserProfile object
                             print(profile.email!)
                             self.profile = profile
-                            
+                            print("profile email set")
+                            print(profile.email)
                             self.performSegue(withIdentifier: "profileSegue", sender: nil)
                             
                         case .failure(let error):

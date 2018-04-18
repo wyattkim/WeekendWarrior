@@ -39,6 +39,7 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if let destinationViewController = segue.destination as? TrailDisplayController {
             destinationViewController.trail = self.trail
+            destinationViewController.userEmail = self.email
         }
     }
     
