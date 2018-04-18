@@ -756,9 +756,8 @@
         <image name="share.png" width="78" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TzC-Vg-3cZ"/>
         <segue reference="zya-Jg-bDM"/>
-        <segue reference="AJ3-tZ-qYi"/>
-        <segue reference="nOS-dZ-lvn"/>
+        <segue reference="nSX-Xk-k9f"/>
+        <segue reference="TAm-Ti-qAr"/>
     </inferredMetricsTieBreakers>
 </document>

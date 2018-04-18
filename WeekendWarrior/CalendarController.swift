@@ -38,18 +38,15 @@ class CalendarController: UIViewController {
     }
     
     @IBAction func didTapButton(_ sender: Any) {
- 
     }
     
 }
 
 extension CalendarController : CalendarDateRangePickerViewControllerDelegate {
     func didTapCancel() {
-        
     }
     
     func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
-        
     }
     
     
@@ -61,6 +58,9 @@ extension CalendarController : CalendarDateRangePickerViewControllerDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
         label.text = dateFormatter.string(from: startDate) + " to " + dateFormatter.string(from: endDate)
+        DispatchQueue.main.async {
+            print("flag6")
+        }
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     

@@ -23,6 +23,7 @@ import SafariServices
     var client = Client(appID: "OSWJ3BZ2RC", apiKey: "0256f1b463da714f65f61ace9d973b10")
     @IBOutlet weak var openButton: UIButton!
     @IBOutlet weak var changeLocation: UIBarButtonItem!
+    var currentNumberOfDays: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +43,31 @@ import SafariServices
     }
     
     @IBAction func openButtonPressed(_ sender: Any) {
-
         searchByDistance(openOnly: true);
-
+    }
+    
+    func searchWithFilters(numDays: Int, difficulty: String, driveTime: Int){
+        print("search with filters called with paramaters:")
+        print(numDays)
+        print(difficulty)
+        print(driveTime)
+        var maxTotalLength = numDays
+        var maxElevation = -1
+        if (driveTime > 4) {
+            maxTotalLength = maxTotalLength - 1
+        }
+        if (difficulty == "easy"){
+            maxElevation = maxTotalLength * 400
+            maxTotalLength = maxTotalLength * 6
+        } else if (difficulty == "medium"){
+            maxElevation = maxTotalLength * 600
+            maxTotalLength = maxTotalLength * 8
+        } else if(difficulty == "hard") {
+            maxElevation = maxTotalLength * 1000
+            maxTotalLength = maxTotalLength * 10
+        }
+        // wyatt search in algolia for trails with miles that are less than MaxTotalLength and
+        // elevation that is less maxElevation
     }
     
     func searchByDistance(openOnly: Bool) {

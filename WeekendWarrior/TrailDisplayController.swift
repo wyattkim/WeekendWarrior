@@ -44,8 +44,7 @@ class TrailDisplayController: UIViewController {
     }
     @IBAction func todoButtonClicked(_ sender: Any) {
        if (userEmail != nil) {
-            // wyatt send this to algolia, add the email for the trail id it is under
-            print(profile.email)
+            print(userEmail)
             print(trail.id)
         } else {
         var refreshAlert = UIAlertController(title: "Account Needed", message: "To add a trail to your to do list, please create an account!", preferredStyle: UIAlertControllerStyle.alert)
