@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     public var email: String!
     var trail = Trail(json: ["": "" as AnyObject])
+    var profile: UserInfo!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if let destinationViewController = segue.destination as? TrailDisplayController {
             destinationViewController.trail = self.trail
-            destinationViewController.userEmail = self.email
+            destinationViewController.profile = self.profile
         }
     }
     
