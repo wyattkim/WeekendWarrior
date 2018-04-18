@@ -11,10 +11,21 @@ import AlgoliaSearch
 import AFNetworking
 import FirebaseAnalytics
 import SafariServices
+import CalendarDateRangePickerViewController
 
 
 
-@objc class TrailTableViewController: UITableViewController {
+@objc class TrailTableViewController: UITableViewController, CalendarDateRangePickerViewControllerDelegate  {
+    func didTapCancel() {
+        //pop view
+        
+    }
+    
+    func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
+        //pop view
+        //get dates
+    }
+    
     //MARK: Properties
     var trails = [Trail]()
     public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
@@ -24,7 +35,24 @@ import SafariServices
     @IBOutlet weak var openButton: UIButton!
     @IBOutlet weak var changeLocation: UIBarButtonItem!
     var currentNumberOfDays: Int!
+    var dateRangePickerViewController: CalendarDateRangePickerViewController!
     
+    @IBAction func DatesButtonPressed(_ sender: Any) {
+        dateRangePickerViewController = CalendarDateRangePickerViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        dateRangePickerViewController.delegate = self
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 10, width: 410, height: 44))
+        dateRangePickerViewController.view.addSubview(navBar)
+        let navItem = UINavigationItem(title: "Dates")
+        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(CalendarController.cancelButtonPressed(_:)))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(CalendarController.cancelButtonPressed(_:)))
+        navItem.leftBarButtonItem = cancelItem
+        navItem.rightBarButtonItem = doneItem
+        navBar.setItems([navItem], animated: false)
+        
+        DispatchQueue.main.async {
+            self.present(self.dateRangePickerViewController, animated: true, completion: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -224,3 +252,28 @@ extension TrailTableViewController: GMSAutocompleteViewControllerDelegate {
     }
     
 }
+
+extension CalendarController : CalendarDateRangePickerViewControllerDelegate {
+    func didTapCancel() {
+    }
+    
+    func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
+    }
+    
+    
+    func didCancelPickingDateRange() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func didPickDateRange(startDate: Date!, endDate: Date!) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+        label.text = dateFormatter.string(from: startDate) + " to " + dateFormatter.string(from: endDate)
+        DispatchQueue.main.async {
+            print("flag6")
+        }
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+}
+

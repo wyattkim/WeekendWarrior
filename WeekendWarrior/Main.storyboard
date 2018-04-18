@@ -227,12 +227,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Dates"/>
                                                 <connections>
-                                                    <segue destination="v6B-Qb-sUz" kind="show" id="Ng3-rQ-14r"/>
+                                                    <action selector="DatesButtonPressed:" destination="skk-8h-L1E" eventType="touchUpInside" id="liG-2e-lqB"/>
                                                 </connections>
                                             </button>
-                                            <connections>
-                                                <segue destination="v6B-Qb-sUz" kind="show" id="zya-Jg-bDM"/>
-                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem style="plain" id="IDE-pS-6sJ">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="axs-Qk-B9b">
@@ -717,22 +714,6 @@
             </objects>
             <point key="canvasLocation" x="3908" y="85.907046476761622"/>
         </scene>
-        <!--Calendar Controller-->
-        <scene sceneID="536-9P-8yg">
-            <objects>
-                <viewController id="v6B-Qb-sUz" customClass="CalendarController" customModule="WeekendWarrior" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e6F-Ty-Jol">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="hsg-lk-91v"/>
-                    </view>
-                    <size key="freeformSize" width="375" height="667"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3WD-co-03d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2950" y="-629"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="1se-7S-gD6">
             <objects>
@@ -756,7 +737,6 @@
         <image name="share.png" width="78" height="88"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zya-Jg-bDM"/>
         <segue reference="nSX-Xk-k9f"/>
         <segue reference="TAm-Ti-qAr"/>
     </inferredMetricsTieBreakers>

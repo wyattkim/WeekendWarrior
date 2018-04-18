@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeekendWarrior/AppDelegate.swift"
+            timestampString = "545699707.7250659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeekendWarrior.AppDelegate.__deallocating_deinit"
+                  moduleName = "WeekendWarrior"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alana/WeekendWarrior/WeekendWarrior/AppDelegate.swift"
+                  timestampString = "544477250.106787"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeekendWarrior.AppDelegate.__allocating_init() -&gt; WeekendWarrior.AppDelegate"
+                  moduleName = "WeekendWarrior"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alana/WeekendWarrior/WeekendWarrior/AppDelegate.swift"
+                  timestampString = "544477250.110019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeekendWarrior.AppDelegate.init() -&gt; WeekendWarrior.AppDelegate"
+                  moduleName = "WeekendWarrior"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alana/WeekendWarrior/WeekendWarrior/AppDelegate.swift"
+                  timestampString = "544477250.113185"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "WeekendWarrior"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alana/WeekendWarrior/WeekendWarrior/AppDelegate.swift"
+                  timestampString = "544477250.115811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

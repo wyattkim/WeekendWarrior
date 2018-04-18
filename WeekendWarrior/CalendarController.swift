@@ -42,26 +42,27 @@ class CalendarController: UIViewController {
     
 }
 
-extension CalendarController : CalendarDateRangePickerViewControllerDelegate {
-    func didTapCancel() {
-    }
-    
-    func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
-    }
-    
-    
-    func didCancelPickingDateRange() {
-        self.navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    func didPickDateRange(startDate: Date!, endDate: Date!) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
-        label.text = dateFormatter.string(from: startDate) + " to " + dateFormatter.string(from: endDate)
-        DispatchQueue.main.async {
-            print("flag6")
-        }
-        self.navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-}
+//extension CalendarController : CalendarDateRangePickerViewControllerDelegate {
+//    func didTapCancel() {
+//    }
+//    
+//    func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
+//    }
+//    
+//    
+//    func didCancelPickingDateRange() {
+//        self.navigationController?.dismiss(animated: true, completion: nil)
+//    }
+//    
+//    func didPickDateRange(startDate: Date!, endDate: Date!) {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+//        label.text = dateFormatter.string(from: startDate) + " to " + dateFormatter.string(from: endDate)
+//        DispatchQueue.main.async {
+//            print("flag6")
+//        }
+//        self.navigationController?.dismiss(animated: true, completion: nil)
+//    }
+//    
+//}
+
