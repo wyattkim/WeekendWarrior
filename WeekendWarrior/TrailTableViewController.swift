@@ -18,7 +18,6 @@ import CalendarDateRangePickerViewController
 @objc class TrailTableViewController: UITableViewController, CalendarDateRangePickerViewControllerDelegate  {
     func didTapCancel() {
         //pop view
-        
     }
     
     func didTapDoneWithDateRange(startDate: Date!, endDate: Date!) {
