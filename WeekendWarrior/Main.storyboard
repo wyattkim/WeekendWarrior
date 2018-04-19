@@ -266,7 +266,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opp-Sx-Iai">
-                                            <rect key="frame" x="99" y="11" width="481" height="37.5"/>
+                                            <rect key="frame" x="99" y="11" width="260" height="37.5"/>
                                             <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -347,7 +347,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2030" y="-69"/>
+            <point key="canvasLocation" x="2236" y="22"/>
         </scene>
         <!--Trail Display Controller-->
         <scene sceneID="lA7-Ag-JRW">
@@ -638,7 +638,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EN-Aj-Wxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="K6s-5h-q7U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2912.8000000000002" y="133.13343328335833"/>
+            <point key="canvasLocation" x="3284" y="133"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="4ZL-Gy-vKx">
@@ -681,6 +681,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg9-IR-mlE">
+                                <rect key="frame" x="61" y="323" width="252" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -693,11 +700,12 @@
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="kSH-kk-5Af" id="EnI-Hd-qsW"/>
+                        <outlet property="savedTrailLabel" destination="yg9-IR-mlE" id="YX1-3R-WNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOh-nL-hBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3908" y="85.907046476761622"/>
+            <point key="canvasLocation" x="4280.8000000000002" y="9.4452773613193415"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1se-7S-gD6">
@@ -712,6 +720,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8C-N0-BJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2830" y="-674"/>
         </scene>
     </scenes>
     <resources>
@@ -723,6 +732,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nSX-Xk-k9f"/>
-        <segue reference="TAm-Ti-qAr"/>
+        <segue reference="nOS-dZ-lvn"/>
     </inferredMetricsTieBreakers>
 </document>

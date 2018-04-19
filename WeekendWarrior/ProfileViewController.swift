@@ -9,22 +9,58 @@
 import UIKit
 import Lock
 import Auth0
+import AlgoliaSearch
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     public var email: String!
     var trail = Trail(json: ["": "" as AnyObject])
     var profile: UserInfo!
-
+    @IBOutlet weak var savedTrailLabel: UILabel!
+    var client = Client(appID: "OSWJ3BZ2RC", apiKey: "0256f1b463da714f65f61ace9d973b10")
+    var savedTrails = [Trail]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            //self.nameLabel.text = self.email
-        }
+
+        self.getSavedTrails(userEmail: self.profile.email!)
         
         // Do any additional setup after loading the view.
     }
+    
+    func getSavedTrails(userEmail: String) {
+        let index = client.index(withName: "beta_trails")
+        let settings = ["attributesForFaceting": ["users"]]
+        index.setSettings(settings)
+        let query = Query(query: "")
 
+        query.attributesToRetrieve = ["name", "status", "description", "objectID", "_geoloc", "distance", "elevation", "number", "type", "difficulty"]
+        query.hitsPerPage = 15
+        query.facets = ["*"]
+        
+        query.filters = "users:\"\(userEmail)\""
+        
+        index.search(query, completionHandler: { (content, error) -> Void in
+            if error == nil {
+                guard let hits = content!["hits"] as? [[String: AnyObject]] else { return }
+                var tmp = [Trail]()
+                for hit in hits {
+                    tmp.append(Trail(json: hit))
+                }
+                self.savedTrails = tmp
+                if (!self.savedTrails.isEmpty) {
+                    DispatchQueue.main.async {
+                    self.savedTrailLabel.text = self.savedTrails[0].name!
+                    }
+                    for trail in self.savedTrails {
+                        print(trail.name!)
+                    }
+                }
+
+            }
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

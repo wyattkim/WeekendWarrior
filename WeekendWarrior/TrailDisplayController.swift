@@ -11,11 +11,12 @@ import MapKit
 import Lock
 import Auth0
 import CalendarDateRangePickerViewController
-
+import AlgoliaSearch
 
 class TrailDisplayController: UIViewController {
     var trail = Trail(json: ["": "" as AnyObject])
     var trails = [Trail]()
+    var currUsers = [String]()
     var currentOpenStatus = true;
     var currWeather: String = ""
     @IBOutlet weak var trailName: UILabel!
@@ -29,6 +30,35 @@ class TrailDisplayController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var elevationLabel: UILabel!
     var profile: UserInfo!
+    var client = Client(appID: "OSWJ3BZ2RC", apiKey: "ed523072ded6b35b61be981768cf1659")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        dataManager.weatherDataForLocation(latitude: trail.lat!, longitude: trail.lng!) { (response, error) in
+            if response != nil {
+                if let weather = response {
+                    DispatchQueue.main.async {
+                        // self.weatherSummary.text = String(describing: weather) + "°F"
+                    }
+                }
+            }
+        }
+        trailName.text = trail.name
+        trailDescription.text = trail.description
+        let distanceString = String(trail.distance!)
+        distanceLabel.text = "Distance: " + distanceString + " miles"
+        difficultyLabel.text = "Difficulty: " + trail.difficulty!.lowercased()
+        let elevationString = String(trail.elevation!)
+        elevationLabel.text = "Elevation: " + elevationString + " feet"
+        
+        //  trailDescription.sizeToFit()
+        statusButton.setTitle(trail.status, for: .normal)
+        var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"
+        urlString += trail.id!
+        urlString += "_0.jpg"
+        trailPhoto.setImageWith(NSURL(string: urlString)! as URL)
+    }
     
     @IBAction func shareClicked(_ sender: Any) {
         let message = "Check out this trail I'd love to backpack with you on WeekendWarrior." 
@@ -42,10 +72,11 @@ class TrailDisplayController: UIViewController {
     }
     @IBAction func todoButtonClicked(_ sender: Any) {
        if (profile != nil) {
-            print(profile.email)
-            print(trail.id)
+            print(profile.email!)
+            print(trail.id!)
+            saveUserToTrail(trailId: trail.id!, userEmail: profile.email!)
         } else {
-        var refreshAlert = UIAlertController(title: "Account Needed", message: "To add a trail to your to do list, please create an account!", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: "Account Needed", message: "To add a trail to your to do list, please create an account!", preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
             self.showLoginController(self.statusButton)
@@ -56,6 +87,67 @@ class TrailDisplayController: UIViewController {
         
         present(refreshAlert, animated: true, completion: nil)
         }
+    }
+    
+    func saveUserToTrail(trailId: String, userEmail: String) {
+        let index = client.index(withName: "beta_trails")
+        let settings = ["attributesForFaceting": ["objectID"]]
+        index.setSettings(settings)
+        let query = Query(query: "")
+        
+        query.attributesToRetrieve = ["users"]
+        query.hitsPerPage = 15
+        query.facets = ["*"]
+        
+        query.filters = "objectID:\"\(trailId)\""
+
+        
+        index.search(query, completionHandler: { (content, error) -> Void in
+            if error == nil {
+                guard let hits = content!["hits"] as? [[String: AnyObject]] else { return }
+                var tmp = [Trail]()
+                for hit in hits {
+                    tmp.append(Trail(json: hit))
+                }
+  
+                    if (tmp[0].users!.isEmpty) {
+                        print("no users, adding this user")
+                        self.currUsers.append(userEmail)
+                        let obj = ["users": self.currUsers, "objectID": trailId] as [String : Any]
+                        print("updating users: \(self.currUsers)")
+                        index.partialUpdateObjects(
+                            [obj],
+                            completionHandler: { (content, error) -> Void in
+                                if error == nil {
+                                    print("Object IDs: \(content!)")
+                                } else {
+                                    print(error!)
+                                }
+                        }
+                        )
+                    } else if (tmp[0].users!.contains(userEmail)) {
+                        print("already contains this user")
+                        return
+                    }
+                    else {
+                        print("has other users, adding this user")
+                        self.currUsers = tmp[0].users!
+                        self.currUsers.append(userEmail)
+                        let obj = ["users": self.currUsers, "objectID": trailId] as [String : Any]
+                        print("updating users: \(self.currUsers)")
+                        index.partialUpdateObjects(
+                            [obj],
+                            completionHandler: { (content, error) -> Void in
+                                if error == nil {
+                                    print("Object IDs: \(content!)")
+                                } else {
+                                    print(error!)
+                                }
+                        }
+                        )
+                    }
+            }
+        })
     }
     
     @IBAction func showLoginController(_ sender: UIButton) {
@@ -87,7 +179,6 @@ class TrailDisplayController: UIViewController {
                             print(profile.email!)
                             self.profile = profile
                             print("profile email set")
-                            print(profile.email)
                             self.performSegue(withIdentifier: "profileSegue", sender: nil)
                             
                         case .failure(let error):
@@ -122,37 +213,7 @@ class TrailDisplayController: UIViewController {
     
     public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2DMake(0, 0)
     private let dataManager = DataManager(baseURL: API.AuthenticatedBaseURL)
-
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        dataManager.weatherDataForLocation(latitude: trail.lat!, longitude: trail.lng!) { (response, error) in
-            if response != nil {
-                if let weather = response {
-                    DispatchQueue.main.async {
-                       // self.weatherSummary.text = String(describing: weather) + "°F"
-                    }
-                }
-            }
-        }
-        trailName.text = trail.name
-        trailDescription.text = trail.description
-        let distanceString = String(trail.distance!)
-        distanceLabel.text = "Distance: " + distanceString + " miles"
-        difficultyLabel.text = "Difficulty: " + trail.difficulty!.lowercased()
-        let elevationString = String(trail.elevation!)
-        elevationLabel.text = "Elevation: " + elevationString + " feet"
-        
-       //  trailDescription.sizeToFit()
-        statusButton.setTitle(trail.status, for: .normal)
-        var urlString = "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-903818595232/"
-        urlString += trail.id!
-        urlString += "_0.jpg"
-        trailPhoto.setImageWith(NSURL(string: urlString)! as URL)
-        }
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

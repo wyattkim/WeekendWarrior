@@ -51,7 +51,8 @@ airports.each do |airport|
         elevation: elevation,
         difficulty: difficulty,
         number: number,
-        type: type
+        type: type,
+        users: []
     }
 end
 
