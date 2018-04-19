@@ -19,13 +19,34 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var savedTrailLabel: UILabel!
     var client = Client(appID: "OSWJ3BZ2RC", apiKey: "0256f1b463da714f65f61ace9d973b10")
     var savedTrails = [Trail]()
+    var currentTrails: String!
+    @IBOutlet weak var profPic: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.getSavedTrails(userEmail: self.profile.email!)
-        
-        // Do any additional setup after loading the view.
+        nameLabel.text = self.profile.email
+        profPic.layer.borderWidth = 1
+        profPic.layer.masksToBounds = false
+        profPic.layer.borderColor = UIColor.black.cgColor
+        profPic.layer.cornerRadius = profPic.frame.height/2
+        profPic.clipsToBounds = true
+    }
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func changed(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            self.savedTrailLabel.text = self.currentTrails
+        case 1:
+            self.savedTrailLabel.text = "Coming soon...!"
+        case 2:
+            self.savedTrailLabel.text = self.currentTrails
+        default:
+            break
+        }
     }
     
     func getSavedTrails(userEmail: String) {
@@ -49,11 +70,17 @@ class ProfileViewController: UIViewController {
                 }
                 self.savedTrails = tmp
                 if (!self.savedTrails.isEmpty) {
-                    DispatchQueue.main.async {
-                    self.savedTrailLabel.text = self.savedTrails[0].name!
-                    }
                     for trail in self.savedTrails {
-                        print(trail.name!)
+                        if (self.currentTrails != nil) {
+                            self.currentTrails.append("\n\n")
+                        } else {
+                            self.currentTrails = ""
+                        }
+                        self.currentTrails.append(" - ")
+                        self.currentTrails.append(trail.name!)
+                    }
+                    DispatchQueue.main.async {
+                        self.savedTrailLabel.text = self.currentTrails
                     }
                 }
 

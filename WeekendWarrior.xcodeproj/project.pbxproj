@@ -33,6 +33,7 @@
 		E713C0AD204B8825007CEC5F /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AC204B8825007CEC5F /* WeatherData.swift */; };
 		E713C0AF204B8843007CEC5F /* WeatherHourData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713C0AE204B8843007CEC5F /* WeatherHourData.swift */; };
 		E71CAD9520742D28005C602B /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = E71CAD9420742D27005C602B /* line.png */; };
+		E773339320890D2200F690CC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = E773339220890D2000F690CC /* profile.png */; };
 		E78456352027BBDE00CA4717 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E78456342027BBDE00CA4717 /* SecondViewController.m */; };
 		E7AFA6F6204F08EF00C66697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AFA6F5204F08EE00C66697 /* Main.storyboard */; };
 		E7CF0BBC207E715B001F8B44 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CF0BBB207E7159001F8B44 /* share.png */; };
@@ -99,6 +100,7 @@
 		E713C0AC204B8825007CEC5F /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		E713C0AE204B8843007CEC5F /* WeatherHourData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHourData.swift; sourceTree = "<group>"; };
 		E71CAD9420742D27005C602B /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = ../../Desktop/line.png; sourceTree = "<group>"; };
+		E773339220890D2000F690CC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		E78456332027BBDE00CA4717 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E78456342027BBDE00CA4717 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7AFA6F5204F08EE00C66697 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				DB0358232008402B00622A08 /* RootViewController.swift */,
 				DB0358252008402B00622A08 /* DataViewController.swift */,
 				E7CF0BBB207E7159001F8B44 /* share.png */,
+				E773339220890D2000F690CC /* profile.png */,
 				E71CAD9420742D27005C602B /* line.png */,
 				DB0358272008402B00622A08 /* ModelController.swift */,
 				DB03582C2008402B00622A08 /* Assets.xcassets */,
@@ -365,6 +368,7 @@
 				DB0358302008402B00622A08 /* LaunchScreen.storyboard in Resources */,
 				E7CF0BBC207E715B001F8B44 /* share.png in Resources */,
 				DB9FDC97204E532300C3A663 /* GoogleService-Info.plist in Resources */,
+				E773339320890D2200F690CC /* profile.png in Resources */,
 				DB03582D2008402B00622A08 /* Assets.xcassets in Resources */,
 				E7AFA6F6204F08EF00C66697 /* Main.storyboard in Resources */,
 				DB43D1A0207DC68B0083CB25 /* Screen Shot 2018-04-09 at 5.14.18 PM.png in Resources */,
