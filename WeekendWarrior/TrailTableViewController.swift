@@ -17,8 +17,27 @@ import Auth0
 
 @objc class TrailTableViewController: UITableViewController, CalendarDateRangePickerViewControllerDelegate  {
     func didTapCancel() {
+        print("TRIed to cancel")
         DispatchQueue.main.async {
-            self.navigationController?.dismiss(animated: true, completion: nil)
+            self.dateRangePickerViewController.dismiss(animated: true, completion: {
+                
+            })
+        }
+    }
+
+    func cancelButtonPressed(){
+        DispatchQueue.main.async {
+            self.dateRangePickerViewController.dismiss(animated: true, completion: {
+            
+            })
+        }
+    }
+    
+    func doneButtonPressed(){
+        DispatchQueue.main.async {
+            self.dateRangePickerViewController.dismiss(animated: true, completion: {
+                
+            })
         }
     }
     
@@ -46,8 +65,8 @@ import Auth0
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 10, width: 410, height: 44))
         dateRangePickerViewController.view.addSubview(navBar)
         let navItem = UINavigationItem(title: "Dates")
-        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(CalendarController.cancelButtonPressed(_:)))
-        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(CalendarController.cancelButtonPressed(_:)))
+        let cancelItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(cancelButtonPressed))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(doneButtonPressed))
         navItem.leftBarButtonItem = cancelItem
         navItem.rightBarButtonItem = doneItem
         navBar.setItems([navItem], animated: false)
